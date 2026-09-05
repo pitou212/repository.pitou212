@@ -44,6 +44,33 @@ def git_archive(src, ref):
     return files
 
 
+def auto_suffix(src, ref):
+    """Suffix derived from how many patch commits sit on top of the vendor branch.
+
+    A fixed '.1' cannot express "same upstream release, newer patch layer": editing
+    a patch leaves the version identical, so Kodi never sees an update and the fix
+    never reaches the box. Counting commits in upstream..main gives a number that
+    rises with every patch commit, and Kodi's version comparison is numeric per
+    component, so .2 > .1 as required.
+
+    After an upstream merge the count can fall (upstream absorbs history), but the
+    base version has risen by then, and the base is compared first - so the overall
+    ordering still only ever increases.
+    """
+    for vendor in ('upstream', 'origin/upstream'):
+        n = subprocess.run(['git', '-C', src, 'rev-list', '--count', vendor + '..' + ref],
+                           capture_output=True, text=True)
+        if n.returncode == 0 and n.stdout.strip():
+            return '.' + n.stdout.strip()
+    # Deliberately fatal rather than defaulting to .1. On a CI runner that had not
+    # materialised the vendor branch, a silent .1 would publish a LOWER version than
+    # the build already in the repository, so Kodi would treat the new package as
+    # not-an-update and quietly keep serving the old one - a fix that looks shipped
+    # but never arrives.
+    raise SystemExit('no vendor branch (upstream / origin/upstream) in %s - '
+                     'cannot derive a patch version' % src)
+
+
 def stamp_version(addon_xml, suffix):
     """Append the suffix to the add-on version, leaving everything else alone.
 
@@ -77,9 +104,13 @@ def main():
     ap.add_argument('--src', required=True)
     ap.add_argument('--ref', default='main')
     ap.add_argument('--id', required=True)
-    ap.add_argument('--suffix', default='.1')
+    ap.add_argument('--suffix', default='auto',
+                    help="'auto' counts patch commits over the vendor branch; or give a literal like .1")
     ap.add_argument('--out', required=True)
     a = ap.parse_args()
+
+    if a.suffix == 'auto':
+        a.suffix = auto_suffix(a.src, a.ref)
 
     files = git_archive(a.src, a.ref)
     if 'addon.xml' not in files:

@@ -15,7 +15,7 @@
             <license>See each add-on for its own license.</license>
         </extension>
     </addon>
-    <addon id="script.module.magneto" version="6.09.01.1" name="Magneto Module" provider-name="Magneto">
+    <addon id="script.module.magneto" version="6.09.01.7" name="Magneto Module" provider-name="Magneto">
     	<requires>
     		<import addon="xbmc.python" version="3.0.0" />
     		<import addon="script.module.requests" />
@@ -33,7 +33,7 @@
     		<assets><icon>resources/magneto.png</icon></assets>
     	</extension>
     </addon>
-    <addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (avdvplus/p3i)" provider-name="jurialmunkey, jamal2362, signde" version="65.3.2.16.1">
+    <addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (avdvplus/p3i)" provider-name="jurialmunkey, jamal2362, signde" version="65.3.2.16.4">
         <requires>
             <import addon="xbmc.gui" version="5.17.0" />
             <import addon="script.skinvariables" version="2.2.2" />
