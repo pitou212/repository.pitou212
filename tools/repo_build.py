@@ -96,11 +96,28 @@ def main():
             # can show details without downloading the whole package.
             with open(os.path.join(addon_dir, 'addon.xml'), 'wb') as fh:
                 fh.write(data)
-            for art in ARTWORK:
+            # Kodi resolves a repo add-on's artwork against the paths DECLARED in
+            # its <assets> block, not by convention. An add-on whose icon lives at
+            # resources/media/... therefore needs that whole relative path served
+            # here; extracting only icon.png leaves the browser showing nothing,
+            # with no error anywhere. The conventional names stay as a fallback for
+            # add-ons that declare no assets at all.
+            wanted = set(ARTWORK)
+            am = re.search(r'<assets>(.*?)</assets>', data.decode('utf-8', 'replace'), re.S)
+            if am:
+                for rel in re.findall(r'<\w+>([^<]+)</\w+>', am.group(1)):
+                    rel = rel.strip().replace('\\', '/')
+                    # never let a crafted path escape the add-on directory
+                    if rel and not rel.startswith('/') and '..' not in rel.split('/'):
+                        wanted.add(rel)
+            for art in sorted(wanted):
                 src = '%s/%s' % (addon_id, art)
-                if src in names:
-                    with open(os.path.join(addon_dir, art), 'wb') as fh:
-                        fh.write(z.read(src))
+                if src not in names:
+                    continue
+                dest = os.path.join(addon_dir, *art.split('/'))
+                os.makedirs(os.path.dirname(dest), exist_ok=True)
+                with open(dest, 'wb') as fh:
+                    fh.write(z.read(src))
 
         root = safe_parse(data, '%s addon.xml' % addon_id)
         entries.append((addon_id, newest_ver, data))
