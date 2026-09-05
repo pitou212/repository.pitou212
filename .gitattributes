@@ -2,3 +2,9 @@
 *.png binary
 *.jpg binary
 * text=auto
+
+# The index and its digest must reach GitHub Pages byte-for-byte: git
+# normalising line endings after the md5 is computed makes Kodi ignore the
+# entire repository, with no error shown anywhere.
+docs/omega/zips/addons.xml -text
+docs/omega/zips/addons.xml.md5 -text

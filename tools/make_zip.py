@@ -27,7 +27,11 @@ def is_skipped(name):
 
 def git_archive(src, ref):
     """Return {path: (bytes, mode)} for every tracked file at ref."""
-    out = subprocess.run(['git', '-C', src, 'archive', '--format=tar', ref],
+    # -c core.autocrlf=false is load-bearing: git archive otherwise applies the
+    # repo's CRLF conversion, so a Windows checkout would package CRLF files that
+    # upstream shipped as LF. That drift reaches addons.xml and breaks its md5.
+    out = subprocess.run(['git', '-C', src, '-c', 'core.autocrlf=false',
+                          '-c', 'core.eol=lf', 'archive', '--format=tar', ref],
                          capture_output=True, check=True).stdout
     files = {}
     with tarfile.open(fileobj=io.BytesIO(out)) as tf:

@@ -103,15 +103,26 @@ def main():
         text = re.sub(r'^\s*<\?xml[^>]*\?>\s*', '', text)
         parts.append('\n'.join('    ' + l for l in text.strip().split('\n')))
     parts.append('</addons>')
-    xml = '\n'.join(parts) + '\n'
+    # Normalise to LF before hashing. An add-on manifest can arrive with CRLF
+    # (a Windows checkout of a repo without .gitattributes will produce one), and
+    # git would then rewrite the index to LF on commit -- silently invalidating a
+    # digest computed over the CRLF bytes. Kodi's response to an md5 mismatch is
+    # to ignore the entire repository with no error, so this must be exact.
+    xml = '\n'.join(parts).replace('\r\n', '\n').replace('\r', '\n') + '\n'
 
     index = os.path.join(a.root, 'addons.xml')
-    with io.open(index, 'w', encoding='utf-8', newline='\n') as fh:
-        fh.write(xml)
+    payload = xml.encode('utf-8')
+    with io.open(index, 'wb') as fh:
+        fh.write(payload)
 
-    digest = hashlib.md5(xml.encode('utf-8')).hexdigest()
-    with io.open(index + '.md5', 'w', encoding='utf-8', newline='\n') as fh:
-        fh.write(digest)
+    # Hash what is actually on disk, not what we think we wrote.
+    with io.open(index, 'rb') as fh:
+        on_disk = fh.read()
+    if on_disk != payload:
+        raise SystemExit('addons.xml on disk differs from what was generated')
+    digest = hashlib.md5(on_disk).hexdigest()
+    with io.open(index + '.md5', 'wb') as fh:
+        fh.write(digest.encode('ascii'))
 
     safe_parse(xml.encode('utf-8'), 'generated addons.xml')  # never publish a broken index
     print('  wrote addons.xml (%d add-ons) md5=%s' % (len(entries), digest))
