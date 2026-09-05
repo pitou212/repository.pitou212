@@ -39,7 +39,7 @@
             <license>See each add-on for its own license.</license>
         </extension>
     </addon>
-    <addon id="script.module.magneto" version="6.09.01.11.12" name="Magneto Module" provider-name="Magneto, Pitou">
+    <addon id="script.module.magneto" version="6.09.01.13" name="Magneto Module" provider-name="Magneto, Pitou">
     	<requires>
     		<import addon="xbmc.python" version="3.0.0" />
     		<import addon="script.module.requests" />
