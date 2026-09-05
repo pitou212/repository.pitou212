@@ -1,4 +1,4 @@
-<addon id="script.module.magneto" version="6.09.01.11" name="Magneto Module" provider-name="Magneto, Pitou">
+<addon id="script.module.magneto" version="6.09.01.11.12" name="Magneto Module" provider-name="Magneto, Pitou">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" />
@@ -13,6 +13,6 @@
 		<summary>Magneto Module</summary>
 		<description>A module to query magnet providers.[CR][CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</description>
 		<disclaimer>The author does not host or own any content found within this addon. The author is not responsible for the content found using this addon. The author is not responsible for the use of this addon.</disclaimer>
-		<assets><icon>resources/magneto.png</icon></assets>
+		<assets><icon>icon.png</icon></assets>
 	</extension>
 </addon>
