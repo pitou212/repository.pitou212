@@ -71,6 +71,21 @@ def auto_suffix(src, ref):
                      'cannot derive a patch version' % src)
 
 
+def commit_suffix(src, ref):
+    """Suffix from the total commit count, for an add-on with no upstream at all.
+
+    Fen Light is our own: its upstream is gone (the AnonyMouse repo 404s, and
+    TIKIPETER's ships a different add-on id) and nothing merges into it, so there
+    is no vendor branch to count against. Total commits on the branch is still
+    strictly increasing, which is the only property the version needs.
+    """
+    n = subprocess.run(['git', '-C', src, 'rev-list', '--count', ref],
+                       capture_output=True, text=True)
+    if n.returncode != 0 or not n.stdout.strip():
+        raise SystemExit('cannot count commits on %s in %s' % (ref, src))
+    return '.' + n.stdout.strip()
+
+
 def stamp_version(addon_xml, suffix):
     """Append the suffix to the add-on version, leaving everything else alone.
 
@@ -105,12 +120,16 @@ def main():
     ap.add_argument('--ref', default='main')
     ap.add_argument('--id', required=True)
     ap.add_argument('--suffix', default='auto',
-                    help="'auto' counts patch commits over the vendor branch; or give a literal like .1")
+                    help="'auto' counts patch commits over the vendor branch; "
+                         "'commits' counts all commits (for an add-on with no upstream); "
+                         "or give a literal like .1")
     ap.add_argument('--out', required=True)
     a = ap.parse_args()
 
     if a.suffix == 'auto':
         a.suffix = auto_suffix(a.src, a.ref)
+    elif a.suffix == 'commits':
+        a.suffix = commit_suffix(a.src, a.ref)
 
     files = git_archive(a.src, a.ref)
     if 'addon.xml' not in files:

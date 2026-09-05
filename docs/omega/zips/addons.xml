@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+    <addon id="plugin.video.fenlight" name="FenLightAM" provider-name="AnonyMouse" version="2.2.04.178">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0"/>
+            <import addon="script.module.pil" version="1.1.7"/>
+            <import addon="script.module.requests" version="2.19.1"/>
+        </requires>
+        <extension point="xbmc.python.pluginsource" library="resources/lib/fenlight.py">
+            <provides>video</provides>
+        </extension>
+        <extension point="xbmc.service" library="resources/lib/service.py"/>
+        <extension point="xbmc.python.module" library="resources/lib/"/>
+        <extension point="xbmc.addon.metadata">
+            <reuselanguageinvoker>false</reuselanguageinvoker>  <!-- LOCAL PATCH 2026-05-21 (re-verified 2026-07-09 after 10+ SIGSEGV crashes on box with true; re-flipped 2026-07-30 after stale-module cache bug): false is REQUIRED. Otherwise AF3 parallel widget refreshes race on CScriptRunner lifecycle causing SIGSEGV in libpython3.11, AND changed .py files don't reload between plugin invocations. Cost: ~100ms slower per menu nav. IMPORTANT: keep this comment ASCII-only. service.py:AddonXMLCheck.change_xml_file rewrites addon.xml on Windows using cp1252 codec and will TRUNCATE THE FILE TO 0 BYTES if any non-cp1252 char (arrows, curly quotes, em-dash) appears anywhere in the XML. --><summary lang="en">Access your content from Easynews and Debrid Clouds.</summary>
+            <description lang="en">This add-on is intended for advanced Kodi users only. You must own the content of any media you play through this addon. This is an English language only add-on.</description>
+            <platform>all</platform>
+    		<disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers.</disclaimer>
+            <license/>
+            <assets>
+                <icon>resources/media/addon_icons/fenlight_icon_09.png</icon>
+                <fanart>resources/media/fenlight_fanart_01.jpg</fanart>
+            </assets>
+            <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
+        </extension>
+    </addon>
     <addon id="repository.pitou212" name="Pitou212 Repository" version="1.0.0" provider-name="pitou212">
         <extension point="xbmc.addon.repository" name="Pitou212 Repository">
             <dir minversion="20.9.1">
