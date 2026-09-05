@@ -66,11 +66,23 @@ def main():
             print('  skip %s (no zip)' % addon_id)
             continue
 
-        # Prune oldest first, keeping the newest --keep.
-        for ver, path in versions[:-a.keep]:
+        # Prune oldest first, keeping the newest --keep BY VERSION - but never
+        # delete the zip that was just written. A deliberate version reset (e.g.
+        # 2.2.04.181 -> 1.0.0.x) sorts the new build BELOW the old ones, so plain
+        # version pruning would delete the very package the build just produced
+        # and report success having published nothing.
+        newest_file = max(versions, key=lambda t: os.path.getmtime(t[1]))[1]
+        keep = {p for _, p in versions[-a.keep:]} | {newest_file}
+        if newest_file not in {p for _, p in versions[-a.keep:]}:
+            print('  NOTE %s: the newest file is not the highest version - a version '
+                  'reset. Remove the higher-versioned zips or Kodi will keep '
+                  'preferring them.' % addon_id)
+        for ver, path in versions:
+            if path in keep:
+                continue
             os.remove(path)
             print('  pruned %s-%s.zip' % (addon_id, ver))
-        versions = versions[-a.keep:]
+        versions = [v for v in versions if v[1] in keep]
 
         newest_ver, newest_zip = versions[-1]
         with zipfile.ZipFile(newest_zip) as z:
