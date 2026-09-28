@@ -183,7 +183,37 @@ def magneto_repo_icon():
     return img.resize((size, size), Image.LANCZOS)
 
 
+def pitou_repo_icon():
+    """repository.pitou212's own tile: an open package (the repository) holding a P, gold so it
+    reads apart from DeadLight's cyan bulb and Magneto's red magnet in the same add-on grid."""
+    size, w = 512, 512 * S
+    GOLD, GOLD_DIM = (232, 176, 72), (150, 108, 40)
+    img = backdrop(size, (30, 28, 26), (10, 9, 8))
+    img = _glowed(img, w, [150 * S, 88 * S, 362 * S, 300 * S], (120, 86, 30), 46 * S, cap=110)
+    d = ImageDraw.Draw(img)
+    lw = 12 * S
+    # box: front face, then the two open flaps folding back
+    d.rounded_rectangle([158 * S, 150 * S, 354 * S, 326 * S], radius=18 * S, outline=GOLD, width=lw)
+    d.line([(158 * S, 150 * S), (122 * S, 104 * S)], fill=GOLD_DIM, width=lw)
+    d.line([(354 * S, 150 * S), (390 * S, 104 * S)], fill=GOLD_DIM, width=lw)
+    d.line([(122 * S, 104 * S), (206 * S, 104 * S)], fill=GOLD_DIM, width=lw)
+    d.line([(306 * S, 104 * S), (390 * S, 104 * S)], fill=GOLD_DIM, width=lw)
+    # the P, set in the box
+    f = fit_font('P', 92 * S)
+    b = f.getbbox('P')
+    d.text((256 * S - (b[2] - b[0]) / 2 - b[0], 238 * S - (b[3] - b[1]) / 2 - b[1]), 'P', font=f, fill=GOLD)
+    # name + role
+    f = fit_font('PITOU212', w * 0.62)
+    b = f.getbbox('PITOU212')
+    d.text((w / 2 - (b[2] - b[0]) / 2 - b[0], 372 * S - b[1]), 'PITOU212', font=f, fill=SILVER)
+    f = fit_font('REPOSITORY', w * 0.40)
+    b = f.getbbox('REPOSITORY')
+    d.text((w / 2 - (b[2] - b[0]) / 2 - b[0], 440 * S - b[1]), 'REPOSITORY', font=f, fill=GOLD)
+    return img.resize((size, size), Image.LANCZOS)
+
+
 TARGETS = {
+    'pitou-repo-icon.png':      (pitou_repo_icon, 'PNG'),
     'deadlight-repo-icon.png':  (deadlight_repo_icon, 'PNG'),
     'deadlight-addon-icon.png': (deadlight_addon_icon, 'PNG'),
     'deadlight-mini.png':       (deadlight_mini, 'PNG'),
