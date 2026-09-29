@@ -16,7 +16,7 @@ release of the same base version.
 Add this as a repository in Kodi, then install add-ons from it normally:
 
 ```
-https://pitou212.github.io/repository.pitou212/omega/zips/repository.pitou212/repository.pitou212-1.0.1.zip
+https://pitou212.github.io/repository.pitou212/omega/zips/repository.pitou212/repository.pitou212-1.0.2.zip
 ```
 
 ## Licensing

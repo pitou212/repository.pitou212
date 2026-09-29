@@ -375,6 +375,33 @@ TARGETS.update({
 })
 
 
+def pitou_repo_icon_p():
+    """repository.pitou212 1.0.2: the 1.0.1 tile without the PITOU212 line -- the open box with its P,
+    lowered into the space, and REPOSITORY alone underneath, larger."""
+    size, w = 512, 512 * S
+    GOLD, GOLD_DIM = (232, 176, 72), (150, 108, 40)
+    dy = 36 * S
+    img = backdrop(size, (30, 28, 26), (10, 9, 8))
+    img = _glowed(img, w, [150 * S, 88 * S + dy, 362 * S, 300 * S + dy], (120, 86, 30), 46 * S, cap=110)
+    d = ImageDraw.Draw(img)
+    lw = 12 * S
+    d.rounded_rectangle([158 * S, 150 * S + dy, 354 * S, 326 * S + dy], radius=18 * S, outline=GOLD, width=lw)
+    d.line([(158 * S, 150 * S + dy), (122 * S, 104 * S + dy)], fill=GOLD_DIM, width=lw)
+    d.line([(354 * S, 150 * S + dy), (390 * S, 104 * S + dy)], fill=GOLD_DIM, width=lw)
+    d.line([(122 * S, 104 * S + dy), (206 * S, 104 * S + dy)], fill=GOLD_DIM, width=lw)
+    d.line([(306 * S, 104 * S + dy), (390 * S, 104 * S + dy)], fill=GOLD_DIM, width=lw)
+    f = fit_font('P', 92 * S)
+    b = f.getbbox('P')
+    d.text((256 * S - (b[2] - b[0]) / 2 - b[0], 238 * S + dy - (b[3] - b[1]) / 2 - b[1]), 'P', font=f, fill=GOLD)
+    f = fit_font('REPOSITORY', w * 0.62)
+    b = f.getbbox('REPOSITORY')
+    d.text((w / 2 - (b[2] - b[0]) / 2 - b[0], 402 * S - b[1]), 'REPOSITORY', font=f, fill=GOLD)
+    return img.resize((size, size), Image.LANCZOS)
+
+
+TARGETS['pitou-repo-icon-p.png'] = (pitou_repo_icon_p, 'PNG')
+
+
 if __name__ == '__main__':
     import sys, os
     out = sys.argv[1] if len(sys.argv) > 1 else '.'
