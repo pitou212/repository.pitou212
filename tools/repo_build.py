@@ -110,6 +110,14 @@ def main():
                     # never let a crafted path escape the add-on directory
                     if rel and not rel.startswith('/') and '..' not in rel.split('/'):
                         wanted.add(rel)
+            # The changelog, beside the zip as <id>/changelog.txt, so an add-on's own updater can show what a
+            # new version changes without downloading it (DeadLight's source repository is private).
+            for rel in ('changelog.txt', 'resources/text/changelog.txt'):
+                src = '%s/%s' % (addon_id, rel)
+                if src in names:
+                    with open(os.path.join(addon_dir, 'changelog.txt'), 'wb') as fh:
+                        fh.write(z.read(src))
+                    break
             for art in sorted(wanted):
                 src = '%s/%s' % (addon_id, art)
                 if src not in names:
@@ -155,6 +163,42 @@ def main():
 
     safe_parse(xml.encode('utf-8'), 'generated addons.xml')  # never publish a broken index
     print('  wrote addons.xml (%d add-ons) md5=%s' % (len(entries), digest))
+    install_page(a.root)
+
+
+REPO_ID = 'repository.pitou212'
+
+
+def install_page(zips_root):
+    """The site root's index.html and a copy of the newest repository zip beside it.
+
+    Kodi can install from a plain web folder (File manager > Add source > the site's address, then Add-ons >
+    Install from zip file), but GitHub Pages lists no folder by itself: without an index.html the root is a
+    404. Kodi's web-folder reader only keeps links whose text is the file name the link points at (the
+    Apache autoindex form) and that live in that folder, so the zip is copied up to the root and linked as
+    <a href="x.zip">x.zip</a>. Rewritten on every build, so a new repository version replaces the old copy.
+    """
+    site = os.path.normpath(os.path.join(zips_root, os.pardir, os.pardir))
+    versions = zips_for(os.path.join(zips_root, REPO_ID), REPO_ID) if os.path.isdir(os.path.join(zips_root, REPO_ID)) else []
+    if not versions:
+        print('  no %s zip; install page left as it is' % REPO_ID)
+        return
+    newest = os.path.basename(versions[-1][1])
+    for f in os.listdir(site):
+        if re.fullmatch(re.escape(REPO_ID) + r'-.+\.zip', f) and f != newest:
+            os.remove(os.path.join(site, f))
+    with open(versions[-1][1], 'rb') as src, open(os.path.join(site, newest), 'wb') as dst:
+        dst.write(src.read())
+    page = ('<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+            '<title>Pitou Repository</title>\n<style>body{margin:0;padding:32px 16px;background:#0f1520;color:#e8edf4;'
+            'font:16px/1.6 system-ui,sans-serif}main{max-width:640px;margin:0 auto}a{color:#8cc4ff}code{color:#c9d6e6}</style>\n'
+            '</head>\n<body>\n<main>\n<h1>Pitou Repository</h1>\n'
+            '<p>In Kodi: <b>Settings › File manager › Add source</b>, enter <code>https://pitou212.github.io/repository.pitou212/</code>, '
+            'then <b>Add-ons › Install from zip file</b> and pick the zip below.</p>\n'
+            '<pre><a href="%s">%s</a></pre>\n</main>\n</body>\n</html>\n') % (newest, newest)
+    with io.open(os.path.join(site, 'index.html'), 'w', encoding='utf-8', newline='\n') as fh:
+        fh.write(page)
+    print('  install page: index.html -> %s' % newest)
 
 
 if __name__ == '__main__':

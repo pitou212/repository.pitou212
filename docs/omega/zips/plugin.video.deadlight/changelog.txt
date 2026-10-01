@@ -1,0 +1,96 @@
+[COLOR dodgerblue][B]Version 3.0.2[/B][/COLOR]
+- New torrent provider apibay (The Pirate Bay), searched by title and fast (about half a second); it replaces Knaben, which was too slow. External Scrapers now lists Providers (by IMDb id) and Indexers (search by name) under separate headings.
+- The loading window keeps providers in place while they search and sorts them once at the end, and each provider that found something gets a bar showing its share.
+- The resolve screen's source block is easier to read: the service by name (TorBox), release tags in a fixed order with plain words (Dolby Vision, Atmos, 5.1, English), the release name in grey, and the source count turns amber when a fallback is being tried. The episode title is no longer in capitals.
+- French releases (VF, VFF, VFQ, VF2, TRUEFRENCH) are shown as French, including in season packs.
+- MDBList title ratings were removed; TMDbHelper provides them. MDBList lists and sync are unchanged.
+- New installs start with the language invoker off (it could crash some boxes), and switching it from Tools can no longer empty the add-on's addon.xml.
+
+[COLOR dodgerblue][B]Version 3.0.1[/B][/COLOR]
+- Settings now use Kodi's own settings screen. MDBList Ratings and OMDb Episode Ratings finally appear there (Accounts), and a new OMDb Title Ratings switch lets TMDbHelper handle movie and show ratings instead. Plain API keys are shown instead of stars.
+- The loading window was redesigned: it names the episode, shows one row per provider with its count, marks a provider that is switched on but not answering as "down", and uses three columns when more than ten providers are on.
+- New torrent providers: Knaben, TorrentDownload, Bitmagnet, Meteor and BitSearch (all off until you switch them on), plus Test All Torrent Providers in External Scrapers.
+- Fake releases are removed: a cached TorBox torrent that holds no video file (usually a lone .exe posing as a new film or episode) no longer appears in the results.
+- Direct Streams no longer offers other episodes. HDHub was answering episode 1 with episodes 10-19 as well, and those bigger files sorted to the top.
+- A provider is no longer shown as "down" just because the show has no IMDb id to search with.
+- SmartPlay: the pin now follows each episode it plays, never plays a season pack for another season, copes with 4KHDHub names cut at 100 characters, and a pin can be cleared from the context menu (Clear SmartPlay Pin).
+- Episode picking from packs keeps an episode whose title happens to be an extras word, and anime specials are no longer matched to a regular episode.
+- Packs listed under one file name now show the real size of the episode that will play.
+- Widgets reload once after playback instead of several times in a row, and stopping playback while Kodi is still opening a file no longer freezes it.
+
+[COLOR dodgerblue][B]Version 2.0.12[/B][/COLOR]
+- Drop Show now works when MDBList is your watched-status provider. It was sending the wrong kind of id, so MDBList matched nothing and the "Show Dropped" message appeared anyway. Toggle Dropped from the MDBList manager was failing too.
+- SmartPlay: if your pinned source is missing from a scrape, the source list now opens instead of quietly playing a different release. The Next Up countdown still appears first when autoplaying, and the message explaining why the list opened now shows at the moment it opens rather than a minute earlier.
+- SIMKL lists refresh far less. Watching one episode used to throw away every cached list and rebuild all of them; now only the lists that actually changed are refreshed.
+- Episode scrapes no longer return files belonging to a different show with a similar name, such as Batman: Caped Crusader answering a search for Batman.
+- Finishing an episode now records it as watched locally even if the update to Trakt, MDBList or SIMKL fails. The tick used to be lost on both sides.
+- Watched Status Provider has moved from Content to Accounts, next to the Trakt, MDBList and SIMKL accounts it chooses between. The settings that open the General tab also have proper headings now instead of sitting under no heading at all.
+
+
+[COLOR darkgoldenrod]DeadLight is a fork of Fen Light. Thanks to its authors.[/COLOR]
+
+
+[COLOR dodgerblue][B]Version 2.0.11[/B][/COLOR]
+- SIMKL: finishing a cour of an anime now puts the next cour on your Watching list automatically. SIMKL files every cour as a separate entry, so until now the next one had to be added by hand once a cour ended. The finished cour is left alone - SIMKL completes it itself.
+
+[COLOR dodgerblue][B]Version 2.0.10[/B][/COLOR]
+- MDBList ratings no longer burn through the daily allowance. A title that has already been looked up is now remembered as done, so it is not asked about again every time you scroll past it. The full 1000 requests a day were going on re-asking about titles that already had their ratings.
+- A title that already has its MDBList ratings is only re-checked once a month. Titles MDBList had nothing for are still retried daily.
+
+[COLOR dodgerblue][B]Version 2.0.9[/B][/COLOR]
+- SmartPlay: when your pinned source is found but will not play, the source list now opens instead of quietly playing a different release. This also applies while autoplaying the next episode, where it previously moved on without asking.
+- Unchanged: if the pinned source is simply missing from a scrape, the best match still plays. A release being absent from one run is usually temporary; one that is present and will not resolve is not.
+
+[COLOR dodgerblue][B]Version 2.0.8[/B][/COLOR]
+- The TVDB API key has its own heading again. Moving the Artwork Provider settings out left it sitting under Fanart.tv, where it looked like a Fanart.tv setting.
+- All Providers and Calendar have moved from Accounts to Content. Neither holds credentials; they decide how lists and the calendar are shown.
+
+[COLOR dodgerblue][B]Version 2.0.7[/B][/COLOR]
+- The Artwork Provider choices for Movies, TV Shows and Anime have moved from Accounts to Features, next to Ratings Posters. Accounts now holds only the TVDB API key, which is what actually belongs there.
+
+[COLOR dodgerblue][B]Version 2.0.6[/B][/COLOR]
+- Clearlogos now follow the Artwork Provider setting, like backdrops already did. Picking a TVDB option uses TVDB's logo; fanart.tv stays the choice for "Most Liked". Nothing loses a logo it had before, because every option still falls back through the others.
+- Each cour of an anime season now gets its own season poster instead of them all sharing the first one. Re:ZERO is a single TMDb season covering four cours, so all four were showing the same image.
+- Season posters now work with the "Most Liked (fanart.tv)" provider too. fanart.tv has no season posters, so that setting was quietly turning them off rather than sourcing them elsewhere.
+
+[COLOR dodgerblue][B]Version 2.0.5[/B][/COLOR]
+- Fixes episode Trakt ratings that were stored in the wrong scale by 2.0.3 and showed as, for example, 83 instead of 8.3. Affected seasons are refreshed the next time you open them; the rest are left alone.
+
+[COLOR dodgerblue][B]Version 2.0.4[/B][/COLOR]
+- MDBList ratings are now requested at a steady pace instead of all at once. Building a large list fired dozens of requests in the same second, MDBList rejected most of them, and the titles it rejected were cached with no ratings at all for months afterwards - while the daily allowance sat almost entirely unused.
+- More of a list now comes back with Trakt, MyAnimeList, Letterboxd and MDBList scores on the first pass. A big list takes a little longer to finish filling them in.
+
+[COLOR dodgerblue][B]Version 2.0.3[/B][/COLOR]
+- Episode rows now show a Trakt rating, fetched for each episode instead of repeating the show's score. OMDb, the only per-episode source until now, rates 13% of this library's cached episodes and has nothing at all for shows like JoJo's Bizarre Adventure; Trakt rates 92% of them.
+- The IMDb chip on an episode is unchanged and still comes from OMDb, so where both sources have a value you see both.
+- To show it, set one of the three episode rating slots to Trakt in the skin's rating settings.
+
+[COLOR dodgerblue][B]Version 2.0.2[/B][/COLOR]
+- Season packs are now offered for a finished cour of an anime that is still airing. A show like Re:ZERO is one 85-episode season on TMDb covering four cours, so while the newest cour airs, packs were switched off for the whole show and the 2016 Blu-ray boxsets could not be found. Anime only; other TV is unchanged.
+
+[COLOR dodgerblue][B]Version 2.0.1[/B][/COLOR]
+- SmartPlay: a source is only pinned once it actually plays. Choosing a source that then failed used to pin it anyway, so SmartPlay reached for that dead release on every following episode until the pin was cleared by hand.
+- SmartPlay: the pin now records the source that really played. When a chosen source failed and a later one played instead, the failed one was being pinned.
+- SmartPlay: if a pinned source is found but will not play, the background fallback now re-pins whatever plays in its place. A pin that is merely missing from one scrape is left alone, since it usually returns on the next.
+
+[COLOR dodgerblue][B]Version 2.0.0[/B][/COLOR]
+- DeadLight now carries its own version. Releases are numbered deliberately and the old commit-count suffix is gone, so this is 2.0.0 rather than 1.0.0.200.
+- The changelog starts fresh here. Earlier entries belonged to upstream Fen Light, not to this fork.
+
+[COLOR dodgerblue][B]Artwork[/B][/COLOR]
+- New "Artwork Provider" setting, chosen separately for Movies, TV Shows and Anime: TMDb Default, Newest Uploaded (TVDB), Highest Rated (TVDB) or Most Liked (fanart.tv). It selects backdrops and season posters together.
+- The fanart cycle now follows that choice instead of ignoring it. The provider you picked leads; the others only top up once it runs out.
+- Up to 20 background images per item, raised from 8, which fills the artwork gallery in the info dialog.
+- Season rows now carry background images too. They were the one row type that had none.
+- Season posters now appear in EVERY episode list. Previously only anime showed them and regular shows kept the series poster on every season.
+
+[COLOR dodgerblue][B]Ratings[/B][/COLOR]
+- AniList scores now show on anime rows everywhere, not only inside AniList lists.
+- Rotten Tomatoes audience, Metacritic and IMDb gaps are now filled from MDBList. OMDb returns none of these for TV series, and a placeholder was being mistaken for a real value, so those chips stayed blank on every show.
+- Per-episode IMDb scores now backfill into seasons that were cached while OMDb was unavailable. Previously an empty result was kept for up to 182 days.
+- MDBList gained a rate-limit breaker: a throttled response pauses ratings briefly instead of deferring the item for 24 hours.
+
+[COLOR dodgerblue][B]Fixes[/B][/COLOR]
+- Fixed a crash that emptied the episode list on any single-season browse.
+- A failed MDBList list fetch is no longer cached as an empty list. Lists came back blank and stayed blank even after the service recovered.
+- MDBList failures now say so on screen when you are browsing, and stay silent in widgets instead of stacking up notifications.
