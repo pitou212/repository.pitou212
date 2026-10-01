@@ -19,6 +19,15 @@ Add this as a repository in Kodi, then install add-ons from it normally:
 https://pitou212.github.io/repository.pitou212/omega/zips/repository.pitou212/repository.pitou212-1.0.3.zip
 ```
 
+## Mirrored dependencies
+
+Kodi installs a missing dependency only from the add-on's own repository or the
+official one, so Arctic Fuse 3's dependencies that live in signde's repository are
+also served here, as unmodified copies: signde Media Flags, TinyPPI, Skin Variables,
+TextureMaker, TMDb Helper, script.module.jurialmunkey, script.module.infotagger and
+the Roboto CJK SC font. `tools/mirror_deps.py` keeps them level with signde's
+repository every six hours (`.github/workflows/mirror-deps.yml`).
+
 ## Licensing
 
 Add-ons here are redistributed under their own licences, with upstream attribution
