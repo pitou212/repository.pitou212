@@ -1,3 +1,13 @@
+[COLOR dodgerblue][B]Version 3.0.3[/B][/COLOR]
+- The results window was redesigned. List view has compact rows with a detail panel for the selected release: fanart, the full release name, its tags as chips, Site, Group, an estimated bitrate, and Video / Audio / Language rows. WideList shows the same information in columns, and Rows tiles match the List style. Release tags are now text chips (Dolby Vision, HDR10, Atmos, 5.1, MULTI) instead of logos in every view.
+- DeadLight's own settings window is back (Kodi's settings dialog still works and stays in step), and the highlight skips the section headings. Logins for SIMKL, MDBList, AniList and TorBox show a QR code.
+- Options > Enable Scrapers lists every torrent provider by name. New provider Torrents-CSV (off by default), and apibay is shown as PirateBay.
+- Nyaa returns the right season's episodes (cour-aware matching) and keeps its connections open; it is still off until you switch it on.
+- The loading window counts each release once and only what the list will show, lists what was hidden and why, and says when a film is still in cinemas (cam rips hidden until its digital release).
+- Releases that are not the film itself are filtered out, and Blu-ray discs whose film is split over several .m2ts streams are skipped.
+- Login links copied to the clipboard are no longer cut at the first "&", and AniList home rows no longer stay empty after a failed load.
+- Tools > Check For Updates, Rollback and Online Changelog now use DeadLight's own repository; an update is only offered when the online version is newer.
+
 [COLOR dodgerblue][B]Version 3.0.2[/B][/COLOR]
 - New torrent provider apibay (The Pirate Bay), searched by title and fast (about half a second); it replaces Knaben, which was too slow. External Scrapers now lists Providers (by IMDb id) and Indexers (search by name) under separate headings.
 - The loading window keeps providers in place while they search and sorts them once at the end, and each provider that found something gets a bar showing its share.
