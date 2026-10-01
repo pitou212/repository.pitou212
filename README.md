@@ -1,4 +1,4 @@
-# Pitou212 Kodi repository
+# Pitou Kodi repository
 
 Personal Kodi repository serving locally patched builds of third-party add-ons.
 
@@ -16,7 +16,7 @@ release of the same base version.
 Add this as a repository in Kodi, then install add-ons from it normally:
 
 ```
-https://pitou212.github.io/repository.pitou212/omega/zips/repository.pitou212/repository.pitou212-1.0.2.zip
+https://pitou212.github.io/repository.pitou212/omega/zips/repository.pitou212/repository.pitou212-1.0.3.zip
 ```
 
 ## Licensing
