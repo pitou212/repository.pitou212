@@ -1,3 +1,15 @@
+[COLOR dodgerblue][B]Version 3.0.4[/B][/COLOR]
+- The Rows layout is now called Cards and was redesigned: a sidebar with the poster, title and the focused release's full name and tags, and a 3x3 grid of cards showing quality and size, tag chips, the release name, group and site, provider and cache state. The focused card zooms slightly, and each quality starts with a header ('4K - 27 results').
+- AIOStreams results get their tags (HDR / Dolby Vision / HDR10+, codec, audio, channels) from the stream description. Remux releases get their own chip, ranked above Blu-ray, and names keep their '+' (HDR10+, DD+, Disney+).
+- Release groups are coloured by tier in every layout, from TRaSH Guides (gold = tier 1, blue = tiers 2-3) and, for anime, TRaSH plus SeaDex best releases (pink). The group is now shown before the site.
+- Pack releases read Season Pack, Show Pack or Pack. The List panel no longer leaves a gap under short names, and the cache state and provider are on separate lines.
+- Much faster scrapes and results window: debrid cache checks start while providers are still searching, large cache lookups no longer fail on Kodi's SQLite (a rescrape of a big film went from about 6 s to under 1 s), and chips are built from cached tiles.
+- Release names keep the dot in audio channels and codecs (DDP5.1, AAC2.0, H.265 instead of 'DDP5 1'), releases named 'DD+7.1' get the DD+ tag instead of DD, and 'DDPA 5.1' / 'DDP5.1A' (the A is Atmos) get DD+ and Atmos.
+- A release several scrapers found is now one result instead of several: it reads 'COMET +2' on the row, and the List panel and Cards sidebar name every scraper. The copy kept is the one whose name tells the most. Filters gain 'Show from <scraper>', which counts every scraper that found a result.
+- Quick-filter pills above the results: 4K / 1080P / 720P, Cached, HDR · DV and HQ Audio (Atmos, TrueHD, DTS-HD MA, DTS-X, FLAC). Press Up from the top row to reach them, OK to toggle, Back to clear. Qualities combine with each other, the rest narrow the list. The quality header now counts what is shown, and filtered lists start at the top.
+- Release groups are read more carefully: language and format tags (PT-BR, WEB-DL, HDR-DV, Dual-Lat, Multi-Subs) are no longer shown as groups, and 'REMUX-FraMeSToR.MULTI.PT-BR' reads FraMeSToR.
+- Fixed a Kodi crash on exit when DeadLight was still marking items watched in the background.
+
 [COLOR dodgerblue][B]Version 3.0.3[/B][/COLOR]
 - The results window was redesigned. List view has compact rows with a detail panel for the selected release: fanart, the full release name, its tags as chips, Site, Group, an estimated bitrate, and Video / Audio / Language rows. WideList shows the same information in columns, and Rows tiles match the List style. Release tags are now text chips (Dolby Vision, HDR10, Atmos, 5.1, MULTI) instead of logos in every view.
 - DeadLight's own settings window is back (Kodi's settings dialog still works and stays in step), and the highlight skips the section headings. Logins for SIMKL, MDBList, AniList and TorBox show a QR code.
