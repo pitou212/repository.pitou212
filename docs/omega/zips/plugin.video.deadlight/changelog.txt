@@ -1,3 +1,11 @@
+[COLOR dodgerblue][B]Version 3.0.5[/B][/COLOR]
+- Faster start: the Trakt, MDBList, SIMKL and AniList syncs keep their interval across Kodi restarts and never run while the home screen is first loading, so a restart no longer re-syncs everything and reloads every widget. The anime id index loads from a saved copy, and start-up skips work that never changed (add-on file check, skin files, update check when updates are off).
+- MDBList list widgets now show a page at a time (your widget limit) instead of the whole list, with Next Page continuing in the add-on.
+- Next Episodes and Continue Watching open about twice as fast: watched episodes are read in one go instead of show by show.
+- Title search is much faster on a first search: results appear with TMDb artwork and TVDB / fanart.tv artwork fills in afterwards, and the detail lookups reuse a few connections opened while the search runs.
+- On networks that block api.themoviedb.org, DeadLight now stays on api.tmdb.org once it has switched, and remembers it across restarts.
+- Episode ratings, TVDB lookups and the MDBList / Trakt / SIMKL caches do less work while lists load; a dead TMDb host fails over in seconds instead of 20.
+
 [COLOR dodgerblue][B]Version 3.0.4[/B][/COLOR]
 - The Rows layout is now called Cards and was redesigned: a sidebar with the poster, title and the focused release's full name and tags, and a 3x3 grid of cards showing quality and size, tag chips, the release name, group and site, provider and cache state. The focused card zooms slightly, and each quality starts with a header ('4K - 27 results').
 - AIOStreams results get their tags (HDR / Dolby Vision / HDR10+, codec, audio, channels) from the stream description. Remux releases get their own chip, ranked above Blu-ray, and names keep their '+' (HDR10+, DD+, Disney+).
