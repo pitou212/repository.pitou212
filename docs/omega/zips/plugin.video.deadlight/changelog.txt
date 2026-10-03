@@ -1,3 +1,12 @@
+[COLOR dodgerblue][B]Version 3.0.6[/B][/COLOR]
+- MyAnimeList: sign in with your own MAL app, and episodes you watch update your MAL progress, as AniList already did. Rewatching an early episode never lowers your progress on either list.
+- My Content has MyAnimeList Lists (Watching, Completed, On Hold, Dropped, Plan to Watch).
+- The Anime List Manager (was AniList Manager) sets status, score or removal on AniList and MyAnimeList together, and marks where the title sits on each list.
+- The next page of a catalogue loads in the background while you look at the current one, so Next Page opens almost instantly.
+- Continue Watching and Next Episodes show newly aired episodes on time again: air times from Trakt were being ignored inside Kodi.
+- SIMKL only reloads widgets after a sync when SIMKL is your watched-status provider.
+- Nyaa: batches are marked as season or show packs with a size per episode, and more English-titled packs are found.
+
 [COLOR dodgerblue][B]Version 3.0.5[/B][/COLOR]
 - Faster start: the Trakt, MDBList, SIMKL and AniList syncs keep their interval across Kodi restarts and never run while the home screen is first loading, so a restart no longer re-syncs everything and reloads every widget. The anime id index loads from a saved copy, and start-up skips work that never changed (add-on file check, skin files, update check when updates are off).
 - MDBList list widgets now show a page at a time (your widget limit) instead of the whole list, with Next Page continuing in the add-on.
