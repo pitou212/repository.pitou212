@@ -1,3 +1,11 @@
+[COLOR dodgerblue][B]Version 3.0.8[/B][/COLOR]
+- Anime season lists show one row per real season. Parts of one season are a single row again (JoJo's Stone Ocean, Mushoku Tensei, Dr. STONE), while shows TMDb files as one long season are still split into their seasons (Frieren, Re:ZERO).
+- Mark Watched on a season updates every AniList and MyAnimeList entry in it with its own episodes, not just the first one.
+- Anime scrapes start sooner: the anime id lookups run side by side instead of one after another, about a second saved on a first play.
+- Browse Similar and Similar (AI) use Google Gemini only, with newer models. Enter the key under Settings > Accounts > Google AI (Gemini). A model that stops answering is now skipped for a day instead of being retried over and over.
+- New Browse AniList Recommended on anime (tick it under Interface > Enable content for the context menu): what AniList users recommend, a season's votes added together. Because You Watched can use it too: choose AniList under Content.
+- Trailers: the newest trailer plays, and an original before a re-release. A season with only clips plays the show's trailer.
+
 [COLOR dodgerblue][B]Version 3.0.7[/B][/COLOR]
 - Up Next is a card in the bottom right corner: the episode's picture, title and runtime, and icon buttons (Next Episode with its countdown, Watch Credits, Stop After This). The Next button fills as the countdown runs. Still Watching and the credits-scene alert are matching cards, and Skip Intro / Recap / Outro is a rounded button with an icon.
 - Next episode with SmartPlay: the release you picked is checked while the episode plays, and a dead link moves to another copy of the same release instead of stopping. A Dolby Vision or HDR pick stays on the same format. With nothing picked, the source list opens after the episode ends.
