@@ -1,3 +1,21 @@
+[COLOR dodgerblue][B]Version 3.0.7[/B][/COLOR]
+- Up Next is a card in the bottom right corner: the episode's picture, title and runtime, and icon buttons (Next Episode with its countdown, Watch Credits, Stop After This). The Next button fills as the countdown runs. Still Watching and the credits-scene alert are matching cards, and Skip Intro / Recap / Outro is a rounded button with an icon.
+- Next episode with SmartPlay: the release you picked is checked while the episode plays, and a dead link moves to another copy of the same release instead of stopping. A Dolby Vision or HDR pick stays on the same format. With nothing picked, the source list opens after the episode ends.
+- Next Episode is one setting: Off, Show Sources or Play Automatically.
+- Settings: everything is in DeadLight's own settings window, and a change applies as soon as you make it. Kodi's Configure opens it. Export, Import and Default Settings are in the window, and the list wraps from last to first.
+- A refreshed look for the dialogs, info pages, results and loading windows: rounded panels, soft shadows and a clearer focus. Button labels are no longer cut off.
+- Results: the scraper name comes first. The P7 chip shows only when the release name says P7, FEL or MEL. TOP PICK is gone. Enable Scrapers lists the scrapers that are on first, and Direct Streams lists HDHub and Custom Stremio Addon under it.
+- Anime and Movies & TV have their own scraper lists. Anime films with no IMDb id are found through Kitsu, and comet asks for anime by Kitsu and IMDb together, so a new season is found sooner.
+- Anime results drop re-edits and recaps, creditless openings and endings, manga volumes, episodes from another season, specials-only packs and review or reaction videos. Season words in other languages (Stagione, Saison, Temporada, Staffel) are understood, and pack file picking is stricter.
+- Anime ids for new seasons that the mapping list has not added yet come from AniList and ani.zip. The mapping list refreshes on its weekly release, and the ids for a show are looked up when its episode list opens, so the first play starts sooner.
+- Anime genres are AniList's tags (Travel, Magic, Military...). The skin's search has an Anime (AniList) row.
+- Dropped lists under TV Shows, Anime and Movies, from your watched-status service.
+- Continue Watching follows MDBList's Up Next, and is right straight after you mark or unmark an episode.
+- Search rows appear in about two seconds, titles under three letters match exactly, and a search you have typed past is dropped.
+- Backgrounds use TMDb's full-size artwork.
+- Watched marks, unmarks and resume points survive a sync that is running. Failed lookups are no longer kept as answers. Release groups are read more accurately, and every provider's packs show a size per episode.
+- A widget that loses rows to an error now says why in the Kodi log.
+
 [COLOR dodgerblue][B]Version 3.0.6[/B][/COLOR]
 - MyAnimeList: sign in with your own MAL app, and episodes you watch update your MAL progress, as AniList already did. Rewatching an early episode never lowers your progress on either list.
 - My Content has MyAnimeList Lists (Watching, Completed, On Hold, Dropped, Plan to Watch).
