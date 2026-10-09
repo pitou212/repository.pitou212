@@ -162,7 +162,7 @@
         </assets>
       </extension>
     </addon>
-    <addon id="script.module.magneto" version="6.09.04.51" name="Magneto Module" provider-name="Magneto, Pitou">
+    <addon id="script.module.magneto" version="6.10.01.55" name="Magneto Module" provider-name="Magneto, Pitou">
     	<requires>
     		<import addon="xbmc.python" version="3.0.0" />
     		<import addon="script.module.requests" />

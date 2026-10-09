@@ -1,4 +1,7 @@
 [COLOR red][B]Version 6.09[/B][/COLOR]
+- Other changes.
+
+[COLOR red][B]Version 6.09[/B][/COLOR]
 - Fix for format change in meteor results, next time will just remove it.
 
 [COLOR red][B]Version 6.07[/B][/COLOR]
