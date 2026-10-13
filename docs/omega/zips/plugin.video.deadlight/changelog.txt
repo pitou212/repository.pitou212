@@ -1,3 +1,18 @@
+[COLOR dodgerblue][B]Version 3.0.9[/B][/COLOR]
+- AF3's status chip on shows you watch says what is next: Airing with the next episode's day and time, Season 3 premieres or Part 2 premieres with the date, Season 3 announced, Mid-season break with the return date, or Season 2 ended. It reads DeadLight's own data instead of TMDb Helper's, which could keep a finale as 'next' for weeks.
+- Anime use AniList's air dates and times. TMDb can be a week late (Overgeared), which hid new episodes from Next Episodes and the Next Episode alert.
+- Chinese animation (donghua: Link Click, Scissor Seven, The Founder of Diabolism) counts as anime, so the anime providers and AniList / MyAnimeList sync work for it.
+- Skip Intro and Skip Recap use the file's chapter names (Opening, OP, Intro, Recap...) when IntroDB has nothing for the episode.
+- The Next Episode alert opens at the start of the outro.
+- SmartPlay picks the same release on the next episode even when a site cuts the release name short.
+- Real-Debrid: turning it on and off works again. Its cache check works again (Debrid Media Manager changed how it signs requests). A torrent Real-Debrid refuses is shown uncached for a week, and a lapsed premium is noticed once instead of failing every play.
+- Cached results are checked faster, and a torrent cached on two debrid services is one row: the other service is tried if the first fails.
+- New anime seasons the mapping list does not have yet find their AnimeTosho episodes through MyAnimeList. Long anime seasons place each arc by its air dates (Tokyo Revengers, Re:ZERO).
+- Season lists: no more '(2024)' rows for remakes, release-season names ('Season 3' instead of 'Season 2 Part 2'), and all-capitals season names in title case.
+- Themes have colour swatches in the picker, dark themes are tinted, and the separate window accent colour is gone (the theme colour is used). The scrape spinner is round on every screen.
+- Extras: an AniList Recommended row for anime.
+- Direct Streams: the PixelDrain availability check runs only with Validate Stream URLs on, so a scrape sends no extra requests otherwise.
+
 [COLOR dodgerblue][B]Version 3.0.8[/B][/COLOR]
 - Anime season lists show one row per real season. Parts of one season are a single row again (JoJo's Stone Ocean, Mushoku Tensei, Dr. STONE), while shows TMDb files as one long season are still split into their seasons (Frieren, Re:ZERO).
 - Mark Watched on a season updates every AniList and MyAnimeList entry in it with its own episodes, not just the first one.
