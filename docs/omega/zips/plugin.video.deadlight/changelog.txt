@@ -1,3 +1,21 @@
+[COLOR dodgerblue][B]Version 3.0.10[/B][/COLOR]
+- Still Watching: Back now means no. It used to keep the autoplay chain going.
+- Next episode: when SmartPlay has no match, the source list waits for the credits instead of cutting the episode short, and does not open at all after you press Stop. A stream that dies says so. Autoplay is no longer cancelled when the episode already ended as the scrape finished. Pause & Wait works with the high-confidence countdown.
+- The loading window says why a source failed ('TorBox: no file for this episode - trying the next source'), and a failed play says why.
+- Up Next shows the time left as minutes and seconds above a minute.
+- Skip Intro from chapter names reads the chapters correctly, and ignores an 'Intro' chapter that would skip most of the episode. An intro or recap with no end time is no longer offered.
+- Next Episodes: a missing season no longer replays the same episode, and specials go to the next special.
+- New torrent provider TorrentDownloads (.pro), off by default (Settings > Scrapers). Torrent sites that drop the connection are retried once.
+- Films keep releases named a year either side of TMDb's on every provider, and episodes named '1x05' are found. S01E10 no longer matches S01E100.
+- Direct Streams: new Filter Results by Name (off by default) drops rows for another show. A failed HDHub request no longer hides Direct Streams for an hour.
+- Titles containing Inside, Extra, Trailer or Auto keep their AIOStreams, Direct Streams and Easynews results (Inside Out, Extraction, The Autopsy of Jane Doe).
+- Cache checks: a debrid service that errors or rate-limits no longer marks torrents uncached for a day.
+- Trakt, MDBList and AniList recover by themselves from expired logins and outages, and Trakt asks you to re-authorize once instead of failing silently.
+- Suikoden: The Anime and similar new Japanese shows count as anime. Anime season lists count each season's episodes correctly when an earlier season is split into parts.
+- TMDb Helper ratings for new titles missing IMDb or Trakt are fetched again. Menus have one icon per item.
+- Searching for titles with &, + or # works (Law & Order). Local Folders shows .strm files. Discover's Clear clears, and Extras' More Like This shows More Like This.
+- Quitting Kodi no longer hangs on DeadLight's background services, and a busy database is never mistaken for a broken one.
+
 [COLOR dodgerblue][B]Version 3.0.9[/B][/COLOR]
 - AF3's status chip on shows you watch says what is next: Airing with the next episode's day and time, Season 3 premieres or Part 2 premieres with the date, Season 3 announced, Mid-season break with the return date, or Season 2 ended. It reads DeadLight's own data instead of TMDb Helper's, which could keep a finale as 'next' for weeks.
 - Anime use AniList's air dates and times. TMDb can be a week late (Overgeared), which hid new episodes from Next Episodes and the Next Episode alert.
