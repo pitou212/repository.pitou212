@@ -1,5 +1,5 @@
-[COLOR red][B]Version 6.09[/B][/COLOR]
-- Other changes.
+[COLOR red][B]Version 6.10[/B][/COLOR]
+- Refactored to fix Kodi 22 Piers log warnings.
 
 [COLOR red][B]Version 6.09[/B][/COLOR]
 - Fix for format change in meteor results, next time will just remove it.
