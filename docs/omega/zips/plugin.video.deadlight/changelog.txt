@@ -1,3 +1,16 @@
+[COLOR dodgerblue][B]Version 3.0.11[/B][/COLOR]
+- New Anime Specials setting (Settings > Content > Anime): Hidden, Specials Folder (as before) or In Airing Order, which places each run of specials between the seasons it aired with. Show Specials now covers other shows.
+- Anime specials find the right episodes, matched to their entries by air date or by name (Monogatari's Owarimonogatari Second Season and Zoku Owarimonogatari, Nekomonogatari, Hanamonogatari). A special with no matching entry is no longer searched as an episode of another one (Attack on Titan, Overlord, Demon Slayer).
+- Anime seasons TMDb has merged, renumbered or moved are numbered correctly again: Bungou Stray Dogs Seasons 1-5, Jujutsu Kaisen Season 2, Tokyo Revengers Season 3 and Monogatari OFF & MONSTER. New seasons the mapping list does not have yet are found by air date (JoJo Part 6, Ace of the Diamond, Shangri-La Frontier).
+- Status chip, one format for every show: 'Airing - E6 - Wed 21 Oct 09:30' for shows you watch, 'Airing - Season 6' or 'Season 2 premieres - Tue 20 Oct' for the rest, plus Renewed, Ended, Awaiting renewal and Awaiting sequel. Shows you have not watched get it too, with no extra loading.
+- New TV Air Times setting (Settings > Content > TV Shows): TVmaze (default), Trakt or TMDb only. TVmaze also tells when a show is renewed and when a talk show's next episode airs.
+- Anime settings choose where each thing comes from: Score (AniList, MyAnimeList or both), Genres (AniList tags, MyAnimeList or TMDb) and Air Times (AniList's Japan times, AnimeSchedule's English sub or dub times with your own AnimeSchedule token, or Trakt / TMDb). The Anime Details setting is gone.
+- The next page of a catalogue, AniList lists included, is prepared while you read the current one.
+- A cached torrent whose file is another resolution than its name says is shown under the file's real name and quality. A torrent TorBox shows to be a pack is labelled as one.
+- Comet keeps season packs only for the season asked. Name checks treat any run of spaces, dots and dashes alike, and films are checked by year (Epic - First Semester, Promise).
+- Next episode: the episode is never cut short at the credits, and the Choose Source card counts the alert time. SmartPlay reads release groups written in brackets.
+- Results window: each provider has its colour stripe and focus tint. Sort to Top matches REMUX only as a word. Random Lists has no Random Anime Lists row.
+
 [COLOR dodgerblue][B]Version 3.0.10[/B][/COLOR]
 - Still Watching: Back now means no. It used to keep the autoplay chain going.
 - Next episode: when SmartPlay has no match, the source list waits for the credits instead of cutting the episode short, and does not open at all after you press Stop. A stream that dies says so. Autoplay is no longer cancelled when the episode already ended as the scrape finished. Pause & Wait works with the high-confidence countdown.
