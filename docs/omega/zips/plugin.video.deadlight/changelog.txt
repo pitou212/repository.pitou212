@@ -1,3 +1,8 @@
+[COLOR dodgerblue][B]Version 4.0.1[/B][/COLOR]
+- Glass Highlight 'Follow Skin' now follows Arctic Fuse 3's solid Focus Style too: the focused row is a solid bar in the skin's highlight colour (yellow, for example) with dark text, light text when the skin reverts selected text. It was always DeadLight's own white bar unless the skin used Glass.
+- The RECAP / INTRO / CREDITS names on the seek bar are sized for Arctic Fuse 3's wider bar (it now reaches the times at both ends).
+- Logs which page the video window shows when playback ends (###empty page###), to trace the empty '..' page sometimes seen after an episode.
+
 [COLOR dodgerblue][B]Version 4.0.0[/B][/COLOR]
 - Show status for Arctic Fuse 3's new info layout: a few words after the season count, coloured by what they mean - green 'New episode Wednesday' / 'New episode tonight', blue 'Season 3 premieres Sat 3 Jan' / 'Renewed', amber 'On break - back Fri 9 Jan', grey 'Ended', red 'Canceled'. Only what a source confirms: nothing is shown for a season that just ended or a show awaiting renewal.
 - Upcoming dates read as people say them: 'Tonight 9:00 PM', 'Tomorrow 6:30 AM', 'Wednesday 6:30 AM', then '12 Nov'.
