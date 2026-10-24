@@ -1,0 +1,289 @@
+[COLOR dodgerblue][B]Version 4.0.0[/B][/COLOR]
+- Show status for Arctic Fuse 3's new info layout: a few words after the season count, coloured by what they mean - green 'New episode Wednesday' / 'New episode tonight', blue 'Season 3 premieres Sat 3 Jan' / 'Renewed', amber 'On break - back Fri 9 Jan', grey 'Ended', red 'Canceled'. Only what a source confirms: nothing is shown for a season that just ended or a show awaiting renewal.
+- Upcoming dates read as people say them: 'Tonight 9:00 PM', 'Tomorrow 6:30 AM', 'Wednesday 6:30 AM', then '12 Nov'.
+- An anime's season count follows its cours, as the season lists and the airing line do: The Apothecary Diaries shows 3 seasons (TMDb files all of it under one), matching its S3E5.
+- Anime shows are marked for Arctic Fuse 3's new Anime ratings section (Skin settings > Ratings > Anime: MyAnimeList, AniList, IMDb by default).
+- SmartPlay waits at most 5 s for a pinned release's provider; a Direct host that is down no longer holds the start ~13 s before the full search.
+- Glass windows no longer turn white under Kodi's own dialogs (number pad, keyboard, context menu), and every window restores its glass on close. Source lists show the title's artwork at full strength, darkened just enough to read.
+- Talk shows named after their host are found (Jimmy.Fallon.2026.10.22 for The Tonight Show Starring Jimmy Fallon), with the air date passed to every scraper.
+- Direct Streams: one row per release, with the other hosts kept as fallbacks (PixelDrain last, for its data cap); playback tries the next host when one does not answer. Releases named 'Show - Episode Title (2026) S01E03' are accepted.
+- Torrent providers retry a connection the network resets (up to three fast tries).
+- Seek bar labels hide once played past; the playing episode's IMDb rating is fetched at once when missing.
+
+[COLOR dodgerblue][B]Version 3.0.19[/B][/COLOR]
+- Credits chapters count: a chapter named Credits, End Credits, Ending, ED, Outro or Staff Roll (or 'Ending: <song>') is now the outro when IntroDB has none. It gets the amber mark on the seek bar, and the next-episode countdown moves to it -- at the credits, or after them when a preview follows. JoJo's Steel Ball Run (Netflix) names its credits chapter.
+- More anime chapter names are read as intros and recaps: OP1, OP 2, 'Opening: <song>', Opening Song, and the Japanese names.
+- When the chapter list arrives late (many streams report it a few seconds in), the next-episode timing tries the final chapter again at 30 s instead of keeping the percentage.
+- HDHub's HubCloud link pages (hubcloud.../drive/...) are no longer offered as sources: they are web pages, not video, and failed at once (Tulsa King S04E02).
+
+[COLOR dodgerblue][B]Version 3.0.18[/B][/COLOR]
+- An episode's Trailer no longer plays a launch promo ('Stream Now on Disney+', 'Don't Miss') when that is all TMDb lists for its season: such a season uses the show's trailer, or the YouTube search for seasons 2 and later. VisionQuest S1 now plays its Official Trailer; Andor S1 was affected the same way.
+- Menu icons are white (were teal), to sit with Arctic Fuse 3's white menus and glass focus.
+
+[COLOR dodgerblue][B]Version 3.0.17[/B][/COLOR]
+- Episode IMDb ratings now come live from IMDb itself, the same day an episode airs: every episode of a season in one request (Mirzapur S3: all 10 rated, OMDb had 3; VisionQuest S1E3 rated 8.2 the day after airing, OMDb had none). No OMDb key needed. Settings > Accounts > IMDb > Episode Ratings (live). It uses the service imdb.com's own pages call, which is not public: if IMDb changes or blocks it, episode IMDb ratings stay empty until an update.
+- A show watched only from Continue Watching now gets its episode ratings too: the playing season is filled in when playback starts, and the OSD rating appears a moment later.
+- Seek bar (Arctic Fuse 3): the intro, recap and credits show as amber marks, and each chapter is its own rounded piece with a gap between, through the played part and the rest alike. An intro mark within 10 s of a chapter break lines up with it. Timings for a different cut of the episode are no longer drawn.
+- Next-episode countdown: when a release ends where the credits would start (credits trimmed), the countdown comes in the final 30 s instead of minutes early (Slow Horses 6x06: 30 s before the end, was 4:19).
+
+[COLOR dodgerblue][B]Version 3.0.16[/B][/COLOR]
+- New setting Window Corners (Settings > General > Window Theme): Rounded (16 px), Soft (8 px) or Square corners on DeadLight's windows - panels, buttons, posters and thumbnails. Round icons stay round. Pairs with Arctic Fuse 3's Soft and Square themes.
+- Source list as glass: the title's blurred artwork (TMDb Helper's blur) fills the window with the fanart softly over it, and the results are frosted rows. The focused result is glass tinted in its provider's colour with a light rim, instead of a solid navy plate and colour block. Without TMDb Helper's blur the list looks as before.
+- The source list draws fewer full-screen layers, so it scrolls more smoothly on weaker graphics.
+
+[COLOR dodgerblue][B]Version 3.0.15[/B][/COLOR]
+- Opening an anime's episode list straight after its season list no longer fetches its AniList score and MAL data a second time.
+- Torrent providers: fixes ported from POV 6.10.17 (magneto upstream is no longer maintained; POV is now the source).
+- New torrent provider: Torlock (on by default; Settings > Scrapers). It finds releases the IMDb-based providers miss: 25 extra for Reacher S02E01, 39 for Oppenheimer.
+- Titles with accented or fullwidth letters (Amélie, Pokémon, SPY×FAMILY) now match their releases; letters were deleted from release names before.
+- Torz season packs are filtered on cleaned names (site prefixes and 【】 tags were left on), and titles with '$' match in six more providers.
+- Releases named 'www.UIndex.org - ...' are no longer rejected (2 real cases found in the scrape cache).
+- Quality: '10800kbps' is no longer read as 1080p, nor '720mb' as 720p; 1080i, 2160p60 and 1920x1080 still read correctly.
+- Realistic browser user agents for the scrapers (some generated ones were impossible and could draw Cloudflare blocks).
+- New default undesirables now reach existing setups at startup (le.production added); a provider that fails to load is logged.
+- Prepared for Kodi 22: the thumbnail cleaner finds the right textures database, and deprecated calls were replaced.
+- Anime lists no longer go empty when AniList is down: every list and the anime search come from MyAnimeList, then Kitsu, until it returns (one notice per session). Seen on 21 Oct, when AniList disabled its API for everyone.
+- New setting Anime Catalogues (Settings > Anime): AniList, MyAnimeList or Kitsu builds the anime lists and search. A list the chosen service cannot answer comes from the next one. Each season keeps its own poster with all three.
+- Torrentio: a torrent that also matched a bonus file ('Extras/Inside the Episode S01E03', 171 MB) now shows the episode's size, not the extra's.
+- Smoother Up Next / Still Watching cards (a glide in and out, a countdown bar that fills continuously instead of in steps), and the source list opens and closes with a short animation.
+
+[COLOR dodgerblue][B]Version 3.0.14[/B][/COLOR]
+- Fewer requests for the same data, so AniList rate-limits anime browsing far less often: an anime's episode counts, cour names and covers are stored once per AniList entry and shared by the season list, the episode list and the scrape (a cold browse page went from 28 AniList requests to 15, an episode list after its season list from 2 to none). An airing anime's broadcast times come with its entry in one request, and a long-running show's recent times no longer need a second one. A browse page's own data now answers its titles' scores.
+- Airing This Season / Airing Last Season share their data with Popular This Season / Trending Last Season (the same AniList request was made twice).
+- Calendars, Recently Aired and Continue Watching fetch each show once, not once per episode row (a cold Recently Aired list: 58 requests to 46).
+- A title shown twice in one list, or opened right after its season list, no longer has its ratings and artwork fetched twice at once, and no longer loses one of those updates.
+- TVDB artwork and season posters come from one request instead of three.
+- A TV show's TVmaze air times also bring its status (Airing / Returning), so the status chip needs no request of its own.
+- Next-page prefetch no longer re-opens connections the page itself just opened.
+- After playback, Continue Watching (and any widget Kodi reloads several times at once) builds once at a time instead of three copies competing: ready in about 1 s instead of 4.
+- MDBList lists no longer drop titles that MDBList lists without a TMDb id.
+
+[COLOR dodgerblue][B]Version 3.0.13[/B][/COLOR]
+- Faster anime browsing. Season lists open at once on a first visit: fanart.tv / TVDB season posters are fetched after the list is shown, ready for the next visit. Cour names are cached, an older show's episode map fetches its data in parallel, and episode lists ask AniList while TMDb answers.
+- AniList pages of new titles load faster: their backgrounds and logos come from TMDb first and fanart.tv / TVDB fill in afterwards.
+- While AniList is rate-limiting, DeadLight stops asking it instead of waiting for each refusal.
+- The playback OSD shows the episode's own rating (IMDb, else TMDb, else Trakt) instead of the status chip. Episode tiles show only the episode's ratings, never the show's.
+- Trailers in the title's own language (Hindi, Japanese, Tamil, Malayalam) when it has no English one; titles with an English trailer play the same one as before.
+
+[COLOR dodgerblue][B]Version 3.0.12[/B][/COLOR]
+- Fixed Kodi crashing on anime lists (Airing This Season page 2 and others): an anime season's rows could recurse into themselves until Kodi died with no error.
+- Anime stays in the anime catalogues: the Movies and TV catalogues (Popular, Trending, Genres, Languages, Networks, Providers, Years...) leave it out while 'Include anime in TV lists' is off. Searches and Recommended still find it.
+- Catalogue fixes: Up Coming and Premieres no longer list re-releases (Rocky 1976, Avengers: Endgame) or films out for months; Airing Today, On the Air, Popular, Trending and In Theaters are English only as intended; anime by provider works (was always empty).
+- AniList lists no longer go blank for 18 minutes after AniList briefly rate-limits; the next open simply asks again.
+- Clearlogo in the title's own language when it has no English one (anime films, Hindi, Tamil and Chinese titles).
+- Status chip shows the season with the episode: 'Airing - S2E9 - Thu 22 Oct', 'Last aired - S6E2 - 6 Oct'. No more 'Season 99 announced' from TMDb's catch-all seasons.
+- When the quality filter leaves nothing, files whose resolution is not stated are shown as UNKNOWN (an episode's file must name the show or the episode).
+- Specials can be marked watched as a whole season.
+- Skip Intro: TheIntroDB asked by TMDb id, intros that start at 0:00 kept, anime retried by TVDB numbers.
+- Knaben replaces Bitsearch as a torrent indexer (off by default; Settings > Scrapers > Indexers).
+- MDBList / SIMKL: unwatching the last episode or clearing the last resume point now syncs. Trakt sync retries failed downloads.
+- SmartPlay reads fansub [Group] names. AniList lists follow the Anime Genres / Score settings.
+- Faster browsing: fewer artwork, rating and air-time requests, one SSL context per process, settings read once.
+
+[COLOR dodgerblue][B]Version 3.0.11[/B][/COLOR]
+- New Anime Specials setting (Settings > Content > Anime): Hidden, Specials Folder (as before) or In Airing Order, which places each run of specials between the seasons it aired with. Show Specials now covers other shows.
+- Anime specials find the right episodes, matched to their entries by air date or by name (Monogatari's Owarimonogatari Second Season and Zoku Owarimonogatari, Nekomonogatari, Hanamonogatari). A special with no matching entry is no longer searched as an episode of another one (Attack on Titan, Overlord, Demon Slayer).
+- Anime seasons TMDb has merged, renumbered or moved are numbered correctly again: Bungou Stray Dogs Seasons 1-5, Jujutsu Kaisen Season 2, Tokyo Revengers Season 3 and Monogatari OFF & MONSTER. New seasons the mapping list does not have yet are found by air date (JoJo Part 6, Ace of the Diamond, Shangri-La Frontier).
+- Status chip, one format for every show: 'Airing - E6 - Wed 21 Oct 09:30' for shows you watch, 'Airing - Season 6' or 'Season 2 premieres - Tue 20 Oct' for the rest, plus Renewed, Ended, Awaiting renewal and Awaiting sequel. Shows you have not watched get it too, with no extra loading.
+- New TV Air Times setting (Settings > Content > TV Shows): TVmaze (default), Trakt or TMDb only. TVmaze also tells when a show is renewed and when a talk show's next episode airs.
+- Anime settings choose where each thing comes from: Score (AniList, MyAnimeList or both), Genres (AniList tags, MyAnimeList or TMDb) and Air Times (AniList's Japan times, AnimeSchedule's English sub or dub times with your own AnimeSchedule token, or Trakt / TMDb). The Anime Details setting is gone.
+- The next page of a catalogue, AniList lists included, is prepared while you read the current one.
+- A cached torrent whose file is another resolution than its name says is shown under the file's real name and quality. A torrent TorBox shows to be a pack is labelled as one.
+- Comet keeps season packs only for the season asked. Name checks treat any run of spaces, dots and dashes alike, and films are checked by year (Epic - First Semester, Promise).
+- Next episode: the episode is never cut short at the credits, and the Choose Source card counts the alert time. SmartPlay reads release groups written in brackets.
+- Results window: each provider has its colour stripe and focus tint. Sort to Top matches REMUX only as a word. Random Lists has no Random Anime Lists row.
+
+[COLOR dodgerblue][B]Version 3.0.10[/B][/COLOR]
+- Still Watching: Back now means no. It used to keep the autoplay chain going.
+- Next episode: when SmartPlay has no match, the source list waits for the credits instead of cutting the episode short, and does not open at all after you press Stop. A stream that dies says so. Autoplay is no longer cancelled when the episode already ended as the scrape finished. Pause & Wait works with the high-confidence countdown.
+- The loading window says why a source failed ('TorBox: no file for this episode - trying the next source'), and a failed play says why.
+- Up Next shows the time left as minutes and seconds above a minute.
+- Skip Intro from chapter names reads the chapters correctly, and ignores an 'Intro' chapter that would skip most of the episode. An intro or recap with no end time is no longer offered.
+- Next Episodes: a missing season no longer replays the same episode, and specials go to the next special.
+- New torrent provider TorrentDownloads (.pro), off by default (Settings > Scrapers). Torrent sites that drop the connection are retried once.
+- Films keep releases named a year either side of TMDb's on every provider, and episodes named '1x05' are found. S01E10 no longer matches S01E100.
+- Direct Streams: new Filter Results by Name (off by default) drops rows for another show. A failed HDHub request no longer hides Direct Streams for an hour.
+- Titles containing Inside, Extra, Trailer or Auto keep their AIOStreams, Direct Streams and Easynews results (Inside Out, Extraction, The Autopsy of Jane Doe).
+- Cache checks: a debrid service that errors or rate-limits no longer marks torrents uncached for a day.
+- Trakt, MDBList and AniList recover by themselves from expired logins and outages, and Trakt asks you to re-authorize once instead of failing silently.
+- Suikoden: The Anime and similar new Japanese shows count as anime. Anime season lists count each season's episodes correctly when an earlier season is split into parts.
+- TMDb Helper ratings for new titles missing IMDb or Trakt are fetched again. Menus have one icon per item.
+- Searching for titles with &, + or # works (Law & Order). Local Folders shows .strm files. Discover's Clear clears, and Extras' More Like This shows More Like This.
+- Quitting Kodi no longer hangs on DeadLight's background services, and a busy database is never mistaken for a broken one.
+
+[COLOR dodgerblue][B]Version 3.0.9[/B][/COLOR]
+- AF3's status chip on shows you watch says what is next: Airing with the next episode's day and time, Season 3 premieres or Part 2 premieres with the date, Season 3 announced, Mid-season break with the return date, or Season 2 ended. It reads DeadLight's own data instead of TMDb Helper's, which could keep a finale as 'next' for weeks.
+- Anime use AniList's air dates and times. TMDb can be a week late (Overgeared), which hid new episodes from Next Episodes and the Next Episode alert.
+- Chinese animation (donghua: Link Click, Scissor Seven, The Founder of Diabolism) counts as anime, so the anime providers and AniList / MyAnimeList sync work for it.
+- Skip Intro and Skip Recap use the file's chapter names (Opening, OP, Intro, Recap...) when IntroDB has nothing for the episode.
+- The Next Episode alert opens at the start of the outro.
+- SmartPlay picks the same release on the next episode even when a site cuts the release name short.
+- Real-Debrid: turning it on and off works again. Its cache check works again (Debrid Media Manager changed how it signs requests). A torrent Real-Debrid refuses is shown uncached for a week, and a lapsed premium is noticed once instead of failing every play.
+- Cached results are checked faster, and a torrent cached on two debrid services is one row: the other service is tried if the first fails.
+- New anime seasons the mapping list does not have yet find their AnimeTosho episodes through MyAnimeList. Long anime seasons place each arc by its air dates (Tokyo Revengers, Re:ZERO).
+- Season lists: no more '(2024)' rows for remakes, release-season names ('Season 3' instead of 'Season 2 Part 2'), and all-capitals season names in title case.
+- Themes have colour swatches in the picker, dark themes are tinted, and the separate window accent colour is gone (the theme colour is used). The scrape spinner is round on every screen.
+- Extras: an AniList Recommended row for anime.
+- Direct Streams: the PixelDrain availability check runs only with Validate Stream URLs on, so a scrape sends no extra requests otherwise.
+
+[COLOR dodgerblue][B]Version 3.0.8[/B][/COLOR]
+- Anime season lists show one row per real season. Parts of one season are a single row again (JoJo's Stone Ocean, Mushoku Tensei, Dr. STONE), while shows TMDb files as one long season are still split into their seasons (Frieren, Re:ZERO).
+- Mark Watched on a season updates every AniList and MyAnimeList entry in it with its own episodes, not just the first one.
+- Anime scrapes start sooner: the anime id lookups run side by side instead of one after another, about a second saved on a first play.
+- Browse Similar and Similar (AI) use Google Gemini only, with newer models. Enter the key under Settings > Accounts > Google AI (Gemini). A model that stops answering is now skipped for a day instead of being retried over and over.
+- New Browse AniList Recommended on anime (tick it under Interface > Enable content for the context menu): what AniList users recommend, a season's votes added together. Because You Watched can use it too: choose AniList under Content.
+- Trailers: the newest trailer plays, and an original before a re-release. A season with only clips plays the show's trailer.
+
+[COLOR dodgerblue][B]Version 3.0.7[/B][/COLOR]
+- Up Next is a card in the bottom right corner: the episode's picture, title and runtime, and icon buttons (Next Episode with its countdown, Watch Credits, Stop After This). The Next button fills as the countdown runs. Still Watching and the credits-scene alert are matching cards, and Skip Intro / Recap / Outro is a rounded button with an icon.
+- Next episode with SmartPlay: the release you picked is checked while the episode plays, and a dead link moves to another copy of the same release instead of stopping. A Dolby Vision or HDR pick stays on the same format. With nothing picked, the source list opens after the episode ends.
+- Next Episode is one setting: Off, Show Sources or Play Automatically.
+- Settings: everything is in DeadLight's own settings window, and a change applies as soon as you make it. Kodi's Configure opens it. Export, Import and Default Settings are in the window, and the list wraps from last to first.
+- A refreshed look for the dialogs, info pages, results and loading windows: rounded panels, soft shadows and a clearer focus. Button labels are no longer cut off.
+- Results: the scraper name comes first. The P7 chip shows only when the release name says P7, FEL or MEL. TOP PICK is gone. Enable Scrapers lists the scrapers that are on first, and Direct Streams lists HDHub and Custom Stremio Addon under it.
+- Anime and Movies & TV have their own scraper lists. Anime films with no IMDb id are found through Kitsu, and comet asks for anime by Kitsu and IMDb together, so a new season is found sooner.
+- Anime results drop re-edits and recaps, creditless openings and endings, manga volumes, episodes from another season, specials-only packs and review or reaction videos. Season words in other languages (Stagione, Saison, Temporada, Staffel) are understood, and pack file picking is stricter.
+- Anime ids for new seasons that the mapping list has not added yet come from AniList and ani.zip. The mapping list refreshes on its weekly release, and the ids for a show are looked up when its episode list opens, so the first play starts sooner.
+- Anime genres are AniList's tags (Travel, Magic, Military...). The skin's search has an Anime (AniList) row.
+- Dropped lists under TV Shows, Anime and Movies, from your watched-status service.
+- Continue Watching follows MDBList's Up Next, and is right straight after you mark or unmark an episode.
+- Search rows appear in about two seconds, titles under three letters match exactly, and a search you have typed past is dropped.
+- Backgrounds use TMDb's full-size artwork.
+- Watched marks, unmarks and resume points survive a sync that is running. Failed lookups are no longer kept as answers. Release groups are read more accurately, and every provider's packs show a size per episode.
+- A widget that loses rows to an error now says why in the Kodi log.
+
+[COLOR dodgerblue][B]Version 3.0.6[/B][/COLOR]
+- MyAnimeList: sign in with your own MAL app, and episodes you watch update your MAL progress, as AniList already did. Rewatching an early episode never lowers your progress on either list.
+- My Content has MyAnimeList Lists (Watching, Completed, On Hold, Dropped, Plan to Watch).
+- The Anime List Manager (was AniList Manager) sets status, score or removal on AniList and MyAnimeList together, and marks where the title sits on each list.
+- The next page of a catalogue loads in the background while you look at the current one, so Next Page opens almost instantly.
+- Continue Watching and Next Episodes show newly aired episodes on time again: air times from Trakt were being ignored inside Kodi.
+- SIMKL only reloads widgets after a sync when SIMKL is your watched-status provider.
+- Nyaa: batches are marked as season or show packs with a size per episode, and more English-titled packs are found.
+
+[COLOR dodgerblue][B]Version 3.0.5[/B][/COLOR]
+- Faster start: the Trakt, MDBList, SIMKL and AniList syncs keep their interval across Kodi restarts and never run while the home screen is first loading, so a restart no longer re-syncs everything and reloads every widget. The anime id index loads from a saved copy, and start-up skips work that never changed (add-on file check, skin files, update check when updates are off).
+- MDBList list widgets now show a page at a time (your widget limit) instead of the whole list, with Next Page continuing in the add-on.
+- Next Episodes and Continue Watching open about twice as fast: watched episodes are read in one go instead of show by show.
+- Title search is much faster on a first search: results appear with TMDb artwork and TVDB / fanart.tv artwork fills in afterwards, and the detail lookups reuse a few connections opened while the search runs.
+- On networks that block api.themoviedb.org, DeadLight now stays on api.tmdb.org once it has switched, and remembers it across restarts.
+- Episode ratings, TVDB lookups and the MDBList / Trakt / SIMKL caches do less work while lists load; a dead TMDb host fails over in seconds instead of 20.
+
+[COLOR dodgerblue][B]Version 3.0.4[/B][/COLOR]
+- The Rows layout is now called Cards and was redesigned: a sidebar with the poster, title and the focused release's full name and tags, and a 3x3 grid of cards showing quality and size, tag chips, the release name, group and site, provider and cache state. The focused card zooms slightly, and each quality starts with a header ('4K - 27 results').
+- AIOStreams results get their tags (HDR / Dolby Vision / HDR10+, codec, audio, channels) from the stream description. Remux releases get their own chip, ranked above Blu-ray, and names keep their '+' (HDR10+, DD+, Disney+).
+- Release groups are coloured by tier in every layout, from TRaSH Guides (gold = tier 1, blue = tiers 2-3) and, for anime, TRaSH plus SeaDex best releases (pink). The group is now shown before the site.
+- Pack releases read Season Pack, Show Pack or Pack. The List panel no longer leaves a gap under short names, and the cache state and provider are on separate lines.
+- Much faster scrapes and results window: debrid cache checks start while providers are still searching, large cache lookups no longer fail on Kodi's SQLite (a rescrape of a big film went from about 6 s to under 1 s), and chips are built from cached tiles.
+- Release names keep the dot in audio channels and codecs (DDP5.1, AAC2.0, H.265 instead of 'DDP5 1'), releases named 'DD+7.1' get the DD+ tag instead of DD, and 'DDPA 5.1' / 'DDP5.1A' (the A is Atmos) get DD+ and Atmos.
+- A release several scrapers found is now one result instead of several: it reads 'COMET +2' on the row, and the List panel and Cards sidebar name every scraper. The copy kept is the one whose name tells the most. Filters gain 'Show from <scraper>', which counts every scraper that found a result.
+- Quick-filter pills above the results: 4K / 1080P / 720P, Cached, HDR · DV and HQ Audio (Atmos, TrueHD, DTS-HD MA, DTS-X, FLAC). Press Up from the top row to reach them, OK to toggle, Back to clear. Qualities combine with each other, the rest narrow the list. The quality header now counts what is shown, and filtered lists start at the top.
+- Release groups are read more carefully: language and format tags (PT-BR, WEB-DL, HDR-DV, Dual-Lat, Multi-Subs) are no longer shown as groups, and 'REMUX-FraMeSToR.MULTI.PT-BR' reads FraMeSToR.
+- Fixed a Kodi crash on exit when DeadLight was still marking items watched in the background.
+
+[COLOR dodgerblue][B]Version 3.0.3[/B][/COLOR]
+- The results window was redesigned. List view has compact rows with a detail panel for the selected release: fanart, the full release name, its tags as chips, Site, Group, an estimated bitrate, and Video / Audio / Language rows. WideList shows the same information in columns, and Rows tiles match the List style. Release tags are now text chips (Dolby Vision, HDR10, Atmos, 5.1, MULTI) instead of logos in every view.
+- DeadLight's own settings window is back (Kodi's settings dialog still works and stays in step), and the highlight skips the section headings. Logins for SIMKL, MDBList, AniList and TorBox show a QR code.
+- Options > Enable Scrapers lists every torrent provider by name. New provider Torrents-CSV (off by default), and apibay is shown as PirateBay.
+- Nyaa returns the right season's episodes (cour-aware matching) and keeps its connections open; it is still off until you switch it on.
+- The loading window counts each release once and only what the list will show, lists what was hidden and why, and says when a film is still in cinemas (cam rips hidden until its digital release).
+- Releases that are not the film itself are filtered out, and Blu-ray discs whose film is split over several .m2ts streams are skipped.
+- Login links copied to the clipboard are no longer cut at the first "&", and AniList home rows no longer stay empty after a failed load.
+- Tools > Check For Updates, Rollback and Online Changelog now use DeadLight's own repository; an update is only offered when the online version is newer.
+
+[COLOR dodgerblue][B]Version 3.0.2[/B][/COLOR]
+- New torrent provider apibay (The Pirate Bay), searched by title and fast (about half a second); it replaces Knaben, which was too slow. External Scrapers now lists Providers (by IMDb id) and Indexers (search by name) under separate headings.
+- The loading window keeps providers in place while they search and sorts them once at the end, and each provider that found something gets a bar showing its share.
+- The resolve screen's source block is easier to read: the service by name (TorBox), release tags in a fixed order with plain words (Dolby Vision, Atmos, 5.1, English), the release name in grey, and the source count turns amber when a fallback is being tried. The episode title is no longer in capitals.
+- French releases (VF, VFF, VFQ, VF2, TRUEFRENCH) are shown as French, including in season packs.
+- MDBList title ratings were removed; TMDbHelper provides them. MDBList lists and sync are unchanged.
+- New installs start with the language invoker off (it could crash some boxes), and switching it from Tools can no longer empty the add-on's addon.xml.
+
+[COLOR dodgerblue][B]Version 3.0.1[/B][/COLOR]
+- Settings now use Kodi's own settings screen. MDBList Ratings and OMDb Episode Ratings finally appear there (Accounts), and a new OMDb Title Ratings switch lets TMDbHelper handle movie and show ratings instead. Plain API keys are shown instead of stars.
+- The loading window was redesigned: it names the episode, shows one row per provider with its count, marks a provider that is switched on but not answering as "down", and uses three columns when more than ten providers are on.
+- New torrent providers: Knaben, TorrentDownload, Bitmagnet, Meteor and BitSearch (all off until you switch them on), plus Test All Torrent Providers in External Scrapers.
+- Fake releases are removed: a cached TorBox torrent that holds no video file (usually a lone .exe posing as a new film or episode) no longer appears in the results.
+- Direct Streams no longer offers other episodes. HDHub was answering episode 1 with episodes 10-19 as well, and those bigger files sorted to the top.
+- A provider is no longer shown as "down" just because the show has no IMDb id to search with.
+- SmartPlay: the pin now follows each episode it plays, never plays a season pack for another season, copes with 4KHDHub names cut at 100 characters, and a pin can be cleared from the context menu (Clear SmartPlay Pin).
+- Episode picking from packs keeps an episode whose title happens to be an extras word, and anime specials are no longer matched to a regular episode.
+- Packs listed under one file name now show the real size of the episode that will play.
+- Widgets reload once after playback instead of several times in a row, and stopping playback while Kodi is still opening a file no longer freezes it.
+
+[COLOR dodgerblue][B]Version 2.0.12[/B][/COLOR]
+- Drop Show now works when MDBList is your watched-status provider. It was sending the wrong kind of id, so MDBList matched nothing and the "Show Dropped" message appeared anyway. Toggle Dropped from the MDBList manager was failing too.
+- SmartPlay: if your pinned source is missing from a scrape, the source list now opens instead of quietly playing a different release. The Next Up countdown still appears first when autoplaying, and the message explaining why the list opened now shows at the moment it opens rather than a minute earlier.
+- SIMKL lists refresh far less. Watching one episode used to throw away every cached list and rebuild all of them; now only the lists that actually changed are refreshed.
+- Episode scrapes no longer return files belonging to a different show with a similar name, such as Batman: Caped Crusader answering a search for Batman.
+- Finishing an episode now records it as watched locally even if the update to Trakt, MDBList or SIMKL fails. The tick used to be lost on both sides.
+- Watched Status Provider has moved from Content to Accounts, next to the Trakt, MDBList and SIMKL accounts it chooses between. The settings that open the General tab also have proper headings now instead of sitting under no heading at all.
+
+
+[COLOR darkgoldenrod]DeadLight is a fork of Fen Light. Thanks to its authors.[/COLOR]
+
+
+[COLOR dodgerblue][B]Version 2.0.11[/B][/COLOR]
+- SIMKL: finishing a cour of an anime now puts the next cour on your Watching list automatically. SIMKL files every cour as a separate entry, so until now the next one had to be added by hand once a cour ended. The finished cour is left alone - SIMKL completes it itself.
+
+[COLOR dodgerblue][B]Version 2.0.10[/B][/COLOR]
+- MDBList ratings no longer burn through the daily allowance. A title that has already been looked up is now remembered as done, so it is not asked about again every time you scroll past it. The full 1000 requests a day were going on re-asking about titles that already had their ratings.
+- A title that already has its MDBList ratings is only re-checked once a month. Titles MDBList had nothing for are still retried daily.
+
+[COLOR dodgerblue][B]Version 2.0.9[/B][/COLOR]
+- SmartPlay: when your pinned source is found but will not play, the source list now opens instead of quietly playing a different release. This also applies while autoplaying the next episode, where it previously moved on without asking.
+- Unchanged: if the pinned source is simply missing from a scrape, the best match still plays. A release being absent from one run is usually temporary; one that is present and will not resolve is not.
+
+[COLOR dodgerblue][B]Version 2.0.8[/B][/COLOR]
+- The TVDB API key has its own heading again. Moving the Artwork Provider settings out left it sitting under Fanart.tv, where it looked like a Fanart.tv setting.
+- All Providers and Calendar have moved from Accounts to Content. Neither holds credentials; they decide how lists and the calendar are shown.
+
+[COLOR dodgerblue][B]Version 2.0.7[/B][/COLOR]
+- The Artwork Provider choices for Movies, TV Shows and Anime have moved from Accounts to Features, next to Ratings Posters. Accounts now holds only the TVDB API key, which is what actually belongs there.
+
+[COLOR dodgerblue][B]Version 2.0.6[/B][/COLOR]
+- Clearlogos now follow the Artwork Provider setting, like backdrops already did. Picking a TVDB option uses TVDB's logo; fanart.tv stays the choice for "Most Liked". Nothing loses a logo it had before, because every option still falls back through the others.
+- Each cour of an anime season now gets its own season poster instead of them all sharing the first one. Re:ZERO is a single TMDb season covering four cours, so all four were showing the same image.
+- Season posters now work with the "Most Liked (fanart.tv)" provider too. fanart.tv has no season posters, so that setting was quietly turning them off rather than sourcing them elsewhere.
+
+[COLOR dodgerblue][B]Version 2.0.5[/B][/COLOR]
+- Fixes episode Trakt ratings that were stored in the wrong scale by 2.0.3 and showed as, for example, 83 instead of 8.3. Affected seasons are refreshed the next time you open them; the rest are left alone.
+
+[COLOR dodgerblue][B]Version 2.0.4[/B][/COLOR]
+- MDBList ratings are now requested at a steady pace instead of all at once. Building a large list fired dozens of requests in the same second, MDBList rejected most of them, and the titles it rejected were cached with no ratings at all for months afterwards - while the daily allowance sat almost entirely unused.
+- More of a list now comes back with Trakt, MyAnimeList, Letterboxd and MDBList scores on the first pass. A big list takes a little longer to finish filling them in.
+
+[COLOR dodgerblue][B]Version 2.0.3[/B][/COLOR]
+- Episode rows now show a Trakt rating, fetched for each episode instead of repeating the show's score. OMDb, the only per-episode source until now, rates 13% of this library's cached episodes and has nothing at all for shows like JoJo's Bizarre Adventure; Trakt rates 92% of them.
+- The IMDb chip on an episode is unchanged and still comes from OMDb, so where both sources have a value you see both.
+- To show it, set one of the three episode rating slots to Trakt in the skin's rating settings.
+
+[COLOR dodgerblue][B]Version 2.0.2[/B][/COLOR]
+- Season packs are now offered for a finished cour of an anime that is still airing. A show like Re:ZERO is one 85-episode season on TMDb covering four cours, so while the newest cour airs, packs were switched off for the whole show and the 2016 Blu-ray boxsets could not be found. Anime only; other TV is unchanged.
+
+[COLOR dodgerblue][B]Version 2.0.1[/B][/COLOR]
+- SmartPlay: a source is only pinned once it actually plays. Choosing a source that then failed used to pin it anyway, so SmartPlay reached for that dead release on every following episode until the pin was cleared by hand.
+- SmartPlay: the pin now records the source that really played. When a chosen source failed and a later one played instead, the failed one was being pinned.
+- SmartPlay: if a pinned source is found but will not play, the background fallback now re-pins whatever plays in its place. A pin that is merely missing from one scrape is left alone, since it usually returns on the next.
+
+[COLOR dodgerblue][B]Version 2.0.0[/B][/COLOR]
+- DeadLight now carries its own version. Releases are numbered deliberately and the old commit-count suffix is gone, so this is 2.0.0 rather than 1.0.0.200.
+- The changelog starts fresh here. Earlier entries belonged to upstream Fen Light, not to this fork.
+
+[COLOR dodgerblue][B]Artwork[/B][/COLOR]
+- New "Artwork Provider" setting, chosen separately for Movies, TV Shows and Anime: TMDb Default, Newest Uploaded (TVDB), Highest Rated (TVDB) or Most Liked (fanart.tv). It selects backdrops and season posters together.
+- The fanart cycle now follows that choice instead of ignoring it. The provider you picked leads; the others only top up once it runs out.
+- Up to 20 background images per item, raised from 8, which fills the artwork gallery in the info dialog.
+- Season rows now carry background images too. They were the one row type that had none.
+- Season posters now appear in EVERY episode list. Previously only anime showed them and regular shows kept the series poster on every season.
+
+[COLOR dodgerblue][B]Ratings[/B][/COLOR]
+- AniList scores now show on anime rows everywhere, not only inside AniList lists.
+- Rotten Tomatoes audience, Metacritic and IMDb gaps are now filled from MDBList. OMDb returns none of these for TV series, and a placeholder was being mistaken for a real value, so those chips stayed blank on every show.
+- Per-episode IMDb scores now backfill into seasons that were cached while OMDb was unavailable. Previously an empty result was kept for up to 182 days.
+- MDBList gained a rate-limit breaker: a throttled response pauses ratings briefly instead of deferring the item for 24 hours.
+
+[COLOR dodgerblue][B]Fixes[/B][/COLOR]
+- Fixed a crash that emptied the episode list on any single-season browse.
+- A failed MDBList list fetch is no longer cached as an empty list. Lists came back blank and stayed blank even after the service recovered.
+- MDBList failures now say so on screen when you are browsing, and stay silent in widgets instead of stacking up notifications.

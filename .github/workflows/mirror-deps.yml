@@ -1,0 +1,56 @@
+name: Mirror dependencies
+
+# Keeps tools/mirror_deps.py's copies of AF3's dependencies level with signde's
+# repository. Kodi only resolves a dependency from the add-on's own repository or
+# the official one, and a mirrored add-on installed from here updates from here
+# only -- so a copy that stops following its source quietly freezes on every
+# device that installed it from us.
+
+on:
+  schedule:
+    - cron: '41 */6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: mirror-deps
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Mirror and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name  "upstream-tracker[bot]"
+          git config user.email "upstream-tracker@users.noreply.github.com"
+          # The three add-on repos publish here too (DIST_TOKEN), and `concurrency` cannot
+          # serialise across repositories. Same answer as theirs: on a rejected push, start
+          # again from the remote state -- the index is regenerated from the zips present,
+          # so nothing can conflict.
+          for attempt in 1 2 3 4 5; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            python3 tools/mirror_deps.py
+            python3 tools/repo_build.py
+            git add -A docs
+            if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
+            git commit -q -m "Mirror dependencies from signde"
+            if git push -q; then
+              echo "published on attempt $attempt"
+              # A push made with GITHUB_TOKEN may not start a Pages build by itself.
+              gh api -X POST "repos/$GITHUB_REPOSITORY/pages/builds" >/dev/null || true
+              exit 0
+            fi
+            echo "push rejected (concurrent publish); retrying"
+            sleep $((attempt * 5))
+          done
+          echo "::error::could not publish after 5 attempts"
+          exit 1
