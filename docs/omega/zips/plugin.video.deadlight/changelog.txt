@@ -1,3 +1,29 @@
+[COLOR dodgerblue][B]Version 4.0.6[/B][/COLOR]
+- Next Page opens faster on more lists: MDBList lists, Trakt lists, TMDb lists, your In Progress / Watched / Favorites lists and Trakt Collection / Watchlist / Recommendations now warm their next page while you look at the current one, as the TMDb and Trakt catalogues already did. Shuffled lists are left alone.
+- Anime with English Dub air times: the dub's later dates no longer confuse which cour (season part) an episode belongs to, so new cours are labelled and searched correctly while their dub is behind Japan.
+
+[COLOR dodgerblue][B]Version 4.0.5[/B][/COLOR]
+- Safer data: a damaged settings, watched, favourites or lists database is kept as a .corrupt copy and logged instead of being deleted without a word, and those databases are now written with a journal so a crash cannot corrupt them.
+- Marking a season or show watched clears every resume point on Trakt / MDBList, not only the first. Trakt resume points and watched marks Trakt refuses are kept and sent again at the next sync.
+- API keys and tokens are no longer written to kodi.log (MDBList, TMDb, AIOStreams, TorBox and others); downloads check certificates; updates only unpack DeadLight's own folder.
+- Real-Debrid cached plays start about 2 s sooner (no fixed waits). A torrent Real-Debrid says is not cached is remembered for a day, even across Clear Scrapers Cache.
+- Real-Debrid cache status comes from Torrentio and MediaFusion (DMM's check is sponsor-only now and is no longer asked).
+- A TorBox outage is reported ('TorBox is not answering') instead of every result silently looking uncached.
+- SmartPlay stays on the provider and host you pinned (Direct Streams FSL / PixelDrain over a bigger torrent of the same release), and waits up to 10 s for it.
+- Quality and tags read from release names more reliably: 720p is no longer found inside episode numbers or sizes, short titles (X, Us, Ma) keep their REMUX / HDR tags, 'Multi Subs' no longer counts as MULTI-LANG, S01E01E02 counts for both episodes.
+- Daily shows (Jeopardy!, talk shows) are searched by air date and asked of Torrentio, Comet and MediaFusion in their own episode numbering, so the latest episode is found.
+- Knaben finds titles with '&' and sorts by seeders.
+- Episode lists: a special as the latest episode no longer counts a show as fully watched; one failed lookup no longer leaves a season empty for days; new episodes of airing seasons appear sooner; air dates follow the real air time.
+- Trakt episode ratings now reach each new episode of an airing season (they stopped after the first fill).
+- Anime season lists open about as fast as TV ones: episode-1 dates come from AniList in one request instead of up to eight ani.zip calls.
+- Next Page warms the next page's anime season counts too, and a home-screen AniList widget's next page is warmed in the background once the home screen is quiet.
+
+[COLOR dodgerblue][B]Version 4.0.4[/B][/COLOR]
+- The resolving bar moves again when you pick from the results: each source now has the whole bar (a fallback starts it over, 'Source 2 of N'). It was divided among every result, so with 86 results the first source had about 1 %, under the point where the bar shows at all.
+- Prefer Known Release Groups (Settings > Results, off by default; idea from Red Light): within each quality, releases from the groups the source list shows in gold come first, then light blue, and for anime the pink ones. Quality is never jumped; Custom Sort To Top still comes first.
+- Anime releases from Torrentio, Comet, MediaFusion and the other providers keep their fansub group ([SubsPlease], [Erai-raws], [Judas]...): the source list's Group column shows it, and the sort above can use it.
+- Two shows with one title (Avatar: The Last Airbender 2005 / 2024, Dark Matter 2015 / 2024): releases carrying the other show's episode title go to the end of the list, marked 'other show?'. Nothing is asked of TMDb; it only acts when the results show the title is shared.
+
 [COLOR dodgerblue][B]Version 4.0.3[/B][/COLOR]
 - Release dates now actually show in Arctic Fuse 3's info line ('Releases 20 Nov', 'Released 23 Oct'): in 4.0.2 the date was read in a way Kodi's Python cannot repeat, and the line fell back to the year.
 - A film that is out only in cinemas gets a CINEMA flag after its date. It goes when its digital release comes (or 90 days after it opened); such a film's details are re-read every 2 days, so a digital date TMDb adds later shows within about 2 days.
