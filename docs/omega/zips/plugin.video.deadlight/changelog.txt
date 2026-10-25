@@ -1,3 +1,7 @@
+[COLOR dodgerblue][B]Version 4.0.3[/B][/COLOR]
+- Release dates now actually show in Arctic Fuse 3's info line ('Releases 20 Nov', 'Released 23 Oct'): in 4.0.2 the date was read in a way Kodi's Python cannot repeat, and the line fell back to the year.
+- A film that is out only in cinemas gets a CINEMA flag after its date. It goes when its digital release comes (or 90 days after it opened); such a film's details are re-read every 2 days, so a digital date TMDb adds later shows within about 2 days.
+
 [COLOR dodgerblue][B]Version 4.0.2[/B][/COLOR]
 - SmartPlay starts 2-3 s sooner when you press play: the pinned pack's link was fetched from TorBox twice (only the next-episode autoplay already reused it).
 - Finishing an episode you had resumed no longer re-downloads your whole MDBList watch history and reloads every widget under the next episode: DeadLight now recognises its own resume-point clear as its own. Continue Watching also waits until nothing is playing before it syncs.
