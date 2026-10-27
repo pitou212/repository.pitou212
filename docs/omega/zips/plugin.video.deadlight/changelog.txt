@@ -1,3 +1,22 @@
+[COLOR dodgerblue][B]Version 4.0.9[/B][/COLOR]
+- Anime films Fribb files under their series (the Naruto Shippuden films and ~700 more) are found by IMDb id: AnimeTosho searches them, and AniList / MAL widgets show the film itself instead of an unrelated one with the same TMDb number ('Chilly Dogs').
+- nekoBT: One Piece episodes 590 on are matched to the right episode (nekoBT's own absolute numbers instead of counting its list, which ran one ahead), and an episode nekoBT has not mapped yet is searched by AniList id.
+- A live-action pack named 1x01 (Netflix One Piece) no longer shows for an anime episode it does not hold.
+- 'Multi-Subs' / 'Multi.Subtitle' no longer get the MULTI chip; MULTI is for multiple audio tracks.
+- Skip Credits button when real content follows the credits (with the autoplay countdown, which then comes after it); credits end where TheIntroDB marks them when IntroDB.app runs them over the post-credits scene.
+- Anime season count no longer includes an announced season that has not aired.
+- Extra fanart: 8 (all Arctic Fuse's cycle shows), from your artwork provider, topped up by the others only when it has fewer.
+- Fanart w1280 instead of original; faster anime season lists (no AniList date prefetch for single-entry shows); the episode list is no longer fetched twice.
+- MDBList watchlist in DeadLight's MDBList menu shows again.
+- Chip images not shown for a month are cleaned up weekly.
+
+[COLOR dodgerblue][B]Version 4.0.8[/B][/COLOR]
+- Arctic Fuse 3's hub spotlight no longer ends on a 'Next Page' slide: a list asked for with nextpage=false (the spotlight now adds it) leaves its Next Page item out. Your widgets keep theirs.
+
+[COLOR dodgerblue][B]Version 4.0.7[/B][/COLOR]
+- When TorBox stops answering, plays fail in seconds instead of minutes: after two requests in a row get no answer, TorBox is skipped for 90 s. The cache check stops waiting on it, its torrent results are dropped, and Direct Streams results are still shown and played. With nothing left, the No Results dialog says TorBox is not answering (and offers only Access Filtered Results, not the retries that would scrape TorBox again).
+- TorBox play failures say why ('no answer when adding the torrent', 'no file list: ...') instead of an internal error.
+
 [COLOR dodgerblue][B]Version 4.0.6[/B][/COLOR]
 - Next Page opens faster on more lists: MDBList lists, Trakt lists, TMDb lists, your In Progress / Watched / Favorites lists and Trakt Collection / Watchlist / Recommendations now warm their next page while you look at the current one, as the TMDb and Trakt catalogues already did. Shuffled lists are left alone.
 - Anime with English Dub air times: the dub's later dates no longer confuse which cour (season part) an episode belongs to, so new cours are labelled and searched correctly while their dub is behind Japan.
