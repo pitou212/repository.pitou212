@@ -1,3 +1,7 @@
+[COLOR dodgerblue][B]Version 4.0.13[/B][/COLOR]
+- Meteor runs on anime: tick it in Anime providers. It asks by the AniList id, the same fast answer as IMDb but numbered the anime way (One Piece 1100, Apothecary Diaries S3E4 found, none before), and keeps names with no S01E05 ('Frieren - 05'). Its Kitsu lookup was skipped: it misses shows that just started (Black Clover Season 2).
+- Anime films with no IMDb id are found on Meteor by their AniList id (On Your Mark). Films with an IMDb id keep it: far more results.
+
 [COLOR dodgerblue][B]Version 4.0.12[/B][/COLOR]
 - IMDb season ratings: a season row shows its own IMDb rating, the vote-weighted average of its episodes' (IMDb rates shows and episodes, never seasons), a cour row over its own episodes. No extra request: the season's episode ratings were already fetched.
 - Anime TMDb keeps as one season where IMDb splits it (Re:Zero: one TMDb season of 85 episodes, four on IMDb) get IMDb ratings for every episode, matched by position in the show; before, only IMDb's first season matched.
