@@ -1,3 +1,8 @@
+[COLOR dodgerblue][B]Version 4.0.12[/B][/COLOR]
+- IMDb season ratings: a season row shows its own IMDb rating, the vote-weighted average of its episodes' (IMDb rates shows and episodes, never seasons), a cour row over its own episodes. No extra request: the season's episode ratings were already fetched.
+- Anime TMDb keeps as one season where IMDb splits it (Re:Zero: one TMDb season of 85 episodes, four on IMDb) get IMDb ratings for every episode, matched by position in the show; before, only IMDb's first season matched.
+- Arctic Fuse's Combined List: Right from a season enters its episodes at the first unwatched one, every time, instead of where the last show's list was.
+
 [COLOR dodgerblue][B]Version 4.0.11[/B][/COLOR]
 - Watch Order (context menu on an anime show): the whole franchise in the order to watch it, from AniList, numbered, with the film version of a TV arc (Mugen Train), recaps, side stories, optional OVAs and not-yet-released entries marked. A season opens its episodes, a film plays. Turn it on in the context menu settings if you saved your own list there.
 - Anime > Genres: AniList's 18 anime genres, most popular first (Mecha, Slice of Life, Mahou Shoujo...), each usable as a widget.
