@@ -1,3 +1,8 @@
+[COLOR dodgerblue][B]Version 4.0.11[/B][/COLOR]
+- Watch Order (context menu on an anime show): the whole franchise in the order to watch it, from AniList, numbered, with the film version of a TV arc (Mugen Train), recaps, side stories, optional OVAs and not-yet-released entries marked. A season opens its episodes, a film plays. Turn it on in the context menu settings if you saved your own list there.
+- Anime > Genres: AniList's 18 anime genres, most popular first (Mecha, Slice of Life, Mahou Shoujo...), each usable as a widget.
+- Menus pick up new rows: the stored Anime / Movies / TV Shows menus follow the add-on's own (a menu you edited is left alone). The Anime menu was missing Anime Dropped.
+
 [COLOR dodgerblue][B]Version 4.0.10[/B][/COLOR]
 - Search shows titles you have watched: with 'Hide watched in widgets' on, Arctic Fuse's search rows (Movies, TV Shows, Anime) left them out, because the skin's search results are widgets. Your other widgets still hide them.
 - Sources window: the rows over the backdrop are lighter glass (45 percent, was 60), so the artwork shows through while the text reads as before.
