@@ -1,3 +1,7 @@
+[COLOR dodgerblue][B]Version 4.0.10[/B][/COLOR]
+- Search shows titles you have watched: with 'Hide watched in widgets' on, Arctic Fuse's search rows (Movies, TV Shows, Anime) left them out, because the skin's search results are widgets. Your other widgets still hide them.
+- Sources window: the rows over the backdrop are lighter glass (45 percent, was 60), so the artwork shows through while the text reads as before.
+
 [COLOR dodgerblue][B]Version 4.0.9[/B][/COLOR]
 - Anime films Fribb files under their series (the Naruto Shippuden films and ~700 more) are found by IMDb id: AnimeTosho searches them, and AniList / MAL widgets show the film itself instead of an unrelated one with the same TMDb number ('Chilly Dogs').
 - nekoBT: One Piece episodes 590 on are matched to the right episode (nekoBT's own absolute numbers instead of counting its list, which ran one ahead), and an episode nekoBT has not mapped yet is searched by AniList id.
