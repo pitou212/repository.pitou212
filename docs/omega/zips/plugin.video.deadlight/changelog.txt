@@ -1,3 +1,12 @@
+[COLOR dodgerblue][B]Version 4.0.14[/B][/COLOR]
+- Credits timed on another cut: when the two skip databases disagree, the credits that fit the file are used (Brothers S1E7: the countdown now starts at the credits, not 30 seconds before the end). A 'recap' marked late in an episode is ignored (Cyberpunk: Edgerunners 2x05).
+- Season counts show the seasons aired, for every show: a season only announced is no longer counted (Severance reads 2, with 'Season 3 announced' beside it).
+- Watch Order: English titles for new entries (Though I Am an Inept Villainess Part 2, 'announced'), real artwork instead of DeadLight's placeholder, and on anime films too (Made in Abyss: Mezameru Shinpi).
+- Up Next card: Season Premiere / Season Finale / Series Finale is back on the episode picture, in its colour.
+- New provider: TorrentGalaxy (Movies & TV, on by default), searched by title; finds WEB-DLs the other providers miss.
+- Anime: 'Rescrape with all providers' includes Nyaa.
+- Playing from the home screen no longer shows the home screen through the Resolving screen for its first moment.
+
 [COLOR dodgerblue][B]Version 4.0.13[/B][/COLOR]
 - Meteor runs on anime: tick it in Anime providers. It asks by the AniList id, the same fast answer as IMDb but numbered the anime way (One Piece 1100, Apothecary Diaries S3E4 found, none before), and keeps names with no S01E05 ('Frieren - 05'). Its Kitsu lookup was skipped: it misses shows that just started (Black Clover Season 2).
 - Anime films with no IMDb id are found on Meteor by their AniList id (On Your Mark). Films with an IMDb id keep it: far more results.
