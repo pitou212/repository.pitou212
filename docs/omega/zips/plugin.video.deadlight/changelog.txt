@@ -1,3 +1,9 @@
+[COLOR dodgerblue][B]Version 4.0.18[/B][/COLOR]
+- Watch Order specials open their own episodes: an OVA, special or short opens just its specials (Attack on Titan OVA = Specials 7-9, Link Click Episode 5.5 = Special 1) instead of the whole Specials list or an AniList search; one TMDb lists as a film plays it (Attack on Titan's recap films, Re:ZERO Memory Snow).
+- Specials reach AniList and MyAnimeList: a finished or marked special updates its own entry (they were never sent).
+- Marking a single episode watched or unwatched updates AniList and MyAnimeList too (only playback and season marks did). Unwatching only lowers progress the list already counts.
+- Watch Order: a season only announced shows when it is expected (expected Oct 2027) and a Plan to Watch button that puts it on your AniList / MAL list.
+
 [COLOR dodgerblue][B]Version 4.0.17[/B][/COLOR]
 - Watch Order opens its own window: a numbered timeline with each step's AniList status (green watched, amber watching, blue planned), side stories and 'or watch this instead' versions under their step, and the step's art, facts and progress beside it. Open / Play goes to that step; List Manager edits that exact entry.
 - Watch Order steps open their own episodes: a show TMDb keeps as one long season (Tokyo Revengers, Re:ZERO, JUJUTSU KAISEN) opens just that part (Season 2 = episodes 25-37). JUJUTSU KAISEN Season 2 opened an empty list; STONE OCEAN Part 2 now reaches its finale; STEEL BALL RUN 2nd & 3rd STAGE opens; a season only announced shows as announced.
