@@ -1,3 +1,10 @@
+[COLOR dodgerblue][B]Version 4.0.16[/B][/COLOR]
+- Next Page on every home-screen widget opens warm, not only AniList's: while the home screen is idle, the next page of each paged widget (Trakt, MDBList, TMDb lists, personal lists) is loaded in the background, each list at most every 6 hours (page 2 in about 0.1 s instead of 1-5 s). A warm cut off by Kodi closing is tried again instead of counting as done.
+- The source results window opens sooner: its fonts and chips are loaded while the scrape runs, not after it (the window's own build fell from 60-310 ms to 13-31 ms).
+- Context menu actions show Kodi's spinner while they work (list managers, Options, Mark Watched, Clear SmartPlay Pin...), out of the way of their dialogs; an action done in under half a second shows none.
+- A source picked from the results list keeps its link, so playing it again from the home screen within 3 hours starts without asking TorBox again.
+- Ready for Kodi 22's Python 3.14 (tested; one deprecated call replaced).
+
 [COLOR dodgerblue][B]Version 4.0.15[/B][/COLOR]
 - Pinned sources start faster: the Resolving screen shows at once instead of a spinner over the home screen, and playing the same title again within 3 hours reuses its link instead of asking TorBox again.
 - The Resolving screen's picture appears at once, with no fade (it could dip to black).
