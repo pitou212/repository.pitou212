@@ -1,3 +1,11 @@
+[COLOR dodgerblue][B]Version 4.0.17[/B][/COLOR]
+- Watch Order opens its own window: a numbered timeline with each step's AniList status (green watched, amber watching, blue planned), side stories and 'or watch this instead' versions under their step, and the step's art, facts and progress beside it. Open / Play goes to that step; List Manager edits that exact entry.
+- Watch Order steps open their own episodes: a show TMDb keeps as one long season (Tokyo Revengers, Re:ZERO, JUJUTSU KAISEN) opens just that part (Season 2 = episodes 25-37). JUJUTSU KAISEN Season 2 opened an empty list; STONE OCEAN Part 2 now reaches its finale; STEEL BALL RUN 2nd & 3rd STAGE opens; a season only announced shows as announced.
+- Watch Order order fixed: Link Click starts at Season 1 (its seasons are web episodes, read as extras); Frieren's chibi shorts and Link Click's Shorts 2 are optional; JoJo's 1993 and 2000 OVAs show as 'or watch this instead' under Stardust Crusaders.
+- Home widgets update after a list change: removing from or adding to an anime list, MDBList, SIMKL, favourites, personal, TMDb or Trakt lists reloads them (removals from the Anime List Manager, MDBList and SIMKL did not).
+- Torrent provider errors are written to the Kodi log again.
+- Leaner: about 4,600 lines of unused or repeated code removed (no visible change).
+
 [COLOR dodgerblue][B]Version 4.0.16[/B][/COLOR]
 - Next Page on every home-screen widget opens warm, not only AniList's: while the home screen is idle, the next page of each paged widget (Trakt, MDBList, TMDb lists, personal lists) is loaded in the background, each list at most every 6 hours (page 2 in about 0.1 s instead of 1-5 s). A warm cut off by Kodi closing is tried again instead of counting as done.
 - The source results window opens sooner: its fonts and chips are loaded while the scrape runs, not after it (the window's own build fell from 60-310 ms to 13-31 ms).
