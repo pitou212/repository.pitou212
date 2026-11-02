@@ -1,3 +1,7 @@
+[COLOR dodgerblue][B]Version 4.0.19[/B][/COLOR]
+- After a change DeadLight reloads only the widgets it touches, not every widget: a list edit reloads that list's widgets (an AniList status change the anime widgets, a Watchlist add the Watchlist), and Mark Watched or the end of playback reloads Continue Watching and the widgets that show that title. Other add-ons' widgets are left alone. Needs Arctic Fuse 3 with the matching update; other skins reload everything as before.
+- Fixed a crash when stopping playback: a background check could still be running as DeadLight's call ended.
+
 [COLOR dodgerblue][B]Version 4.0.18[/B][/COLOR]
 - Watch Order specials open their own episodes: an OVA, special or short opens just its specials (Attack on Titan OVA = Specials 7-9, Link Click Episode 5.5 = Special 1) instead of the whole Specials list or an AniList search; one TMDb lists as a film plays it (Attack on Titan's recap films, Re:ZERO Memory Snow).
 - Specials reach AniList and MyAnimeList: a finished or marked special updates its own entry (they were never sent).
