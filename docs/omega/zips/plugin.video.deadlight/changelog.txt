@@ -1,3 +1,14 @@
+[COLOR dodgerblue][B]Version 4.0.21[/B][/COLOR]
+- Pre-release (cam / TS) results stay hidden when Pre-release is set to Exclude: torrents cached on TorBox were re-read from their file name and shown as 1080p, and HTTP Streams copies listed without their HDTC tag (MoviesDrives) passed as 1080p. They are now marked as cam / TS like their tagged copies.
+- Anime specials find their own releases: a special TMDb and TVDB number differently is searched by the number releases use (Steins;Gate 0's Valentine OVA is TVDB S00E02, not the 2015 prologue; Monogatari's Tsubasa Cat parts are S01E13-15), and AnimeTosho finds it by its AniDB episode ('Steins;Gate 0 - 24 (OVA)'). A custom or episode-group number is searched as given (Bleach S0E3 searched as S00E99 is fixed).
+- One check for every anime result, from every provider, with a reason in the log: other seasons and arcs no longer list (Thousand-Year Blood War in original Bleach and its parts in each other, Off & Monster in Monogatari, Tokyo Revengers' later arcs in Season 1), including releases named only in Chinese or Japanese ('BLEACH 死神 千年血戰篇 - 01').
+- More right anime results: releases named by episode number only ('Naruto 212', 'One Piece 1100', 'Stone Ocean 25'), by the romaji title ('Shigatsu wa Kimi no Uso 01', 'Bleach Sennen Kessen-hen 01'), by a range ('Ep9-13') or as '[Group] Show Episode 196' are no longer refused (comet, torrentio and meteor each gained dozens on hard shows).
+- Fewer wrong ones: manga volumes, soundtracks and drama CDs, scanlations, light novels and archives; packs of another season (Disney+ 'BLEACH S14' for episode 1) or another part; and episodes a range or episode number says are not this one.
+- Re:ZERO episode 27 and Tokyo Revengers episode 50 open the right episode again (they had shifted by one after a Fribb correction).
+- The file picked from a pack is the same on every debrid service: the largest one that is not an extra.
+- Anime scrapes are quicker: AnimeTosho's pack lists are kept 3 days (Thousand-Year Blood War's took 4 s per episode), and the first scrape of a show no longer waits on its title lookups one by one (Monogatari 3.4 s to 0.6 s).
+- Leaner: the anime episode and release logic is in two modules instead of spread over the scrape (no visible change).
+
 [COLOR dodgerblue][B]Version 4.0.20[/B][/COLOR]
 - Fewer diagnostic lines in the Kodi log: the timing and season-art lines are off, and a playback-end check is gone (no visible change).
 
