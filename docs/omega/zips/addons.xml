@@ -25,7 +25,7 @@
         </extension>
     </addon>
     <addon id="plugin.video.themoviedb.helper"
-    version="6.20.2"
+    version="6.21.0"
     name="TMDb Helper"
     provider-name="jurialmunkey">
     <requires>
@@ -231,7 +231,7 @@
         </extension>
     </addon>
     <addon id="script.skinvariables"
-    version="2.2.9"
+    version="2.2.14"
     name="Skin Variables"
     provider-name="jurialmunkey">
     <requires>
