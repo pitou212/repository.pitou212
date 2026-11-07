@@ -1,3 +1,12 @@
+[COLOR dodgerblue][B]Version 4.0.22[/B][/COLOR]
+- AniList and MyAnimeList progress follow the entry's own numbering: shows whose entry counts recaps TMDb leaves out get the right episode (Monogatari Second Season episode 6 is the entry's 7th, and marking the season completes it at 26 instead of stopping at 23/26).
+- MediaFusion works on anime: asked in the numbering it uses, and allowed as an anime provider.
+- More right anime results: whole-series and partial packs that say they hold the episode ('Tokyo Revengers 01-50', 'Frieren [22 of 28]', 'Thousand-Year Blood War P01', 'Steins;Gate 0 COMPLETA'), a later part shipped as '2nd Season - 13 ~ 24', collections whose picked file is the episode ('Fate Stay Night + OVAs + Movies'), OVA collections named only by the season ('ReLIFE S01+OVAs'), and shows watched in a TVDB-order episode group.
+- Fewer wrong ones: a file named 'Season 2 .. 17' for episode 2, light-novel volumes and disc menus.
+- New seasons and recap-heavy shows find their releases (Steel Ball Run, Monogatari Second Season), and release numbering from TheXEM is used where it differs.
+- Anime > OVAs and Specials open the whole OVA (Hunter x Hunter: Greed Island, 8 episodes), not only its first episode.
+- A specials row in the season list is named after its own entry when it shares a season's name.
+
 [COLOR dodgerblue][B]Version 4.0.21[/B][/COLOR]
 - Pre-release (cam / TS) results stay hidden when Pre-release is set to Exclude: torrents cached on TorBox were re-read from their file name and shown as 1080p, and HTTP Streams copies listed without their HDTC tag (MoviesDrives) passed as 1080p. They are now marked as cam / TS like their tagged copies.
 - Anime specials find their own releases: a special TMDb and TVDB number differently is searched by the number releases use (Steins;Gate 0's Valentine OVA is TVDB S00E02, not the 2015 prologue; Monogatari's Tsubasa Cat parts are S01E13-15), and AnimeTosho finds it by its AniDB episode ('Steins;Gate 0 - 24 (OVA)'). A custom or episode-group number is searched as given (Bleach S0E3 searched as S00E99 is fixed).
