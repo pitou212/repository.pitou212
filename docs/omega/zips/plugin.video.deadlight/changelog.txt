@@ -1,3 +1,12 @@
+[COLOR dodgerblue][B]Version 4.0.24[/B][/COLOR]
+- Faster: anime plays start sooner (the Stremio-number lookup and the season-pack checks run while providers search; One Piece's pack checks after the search 0.37 s -> 0.09 s on a PC), Extras opens faster, home widgets, In Progress, Watched TV and Next Episodes build faster, and every click loads less code.
+- Playback no longer waits for the intro / credits lookup before it starts; the stream-open loop and the background service do less work while a video plays.
+- Films TMDb still lists as in cinemas are treated as out when many release groups have retail copies (The Odyssey's Blu-ray and WEB-DL copies were all shown as CAM).
+- Resolving window: the plot ends on a whole line with '...' instead of running into the source details.
+- Settings: section headings stand apart from the settings (bold, highlight colour), pickers no longer show a leading '- ', and the Stremio manifest URL only shows when Direct Streams is on.
+- Sharper rating icons, with the current Trakt logo.
+- The image slideshow shows posters at a screen-sized resolution (downloads stay full size).
+
 [COLOR dodgerblue][B]Version 4.0.23[/B][/COLOR]
 - New look for the windows: Extras (full-screen fanart header, one button row, Details panel, round cast photos), People, images, the text reader, dialogs, Watch Order, Discover and Downloads.
 - Extras and People: one info panel at the top for the focused poster (title, year and rating, two lines of plot).
