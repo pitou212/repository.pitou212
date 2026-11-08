@@ -1,3 +1,12 @@
+[COLOR dodgerblue][B]Version 4.0.25[/B][/COLOR]
+- Anime: filler and recap episodes are marked in episode lists and Next Episodes, and Up Next can skip them (Settings: Skip Filler in Up Next). MAL scores and genres, and the AniList-outage backup, now come from api.tenrai.org (Jikan's API is gone).
+- Anime plays start sooner: the TVDB episode ids an anime scrape needs are fetched while the episode list is open, and no lookup is asked twice any more.
+- Direct Streams: an episode whose release names end on 'S01E04' is no longer dropped; 4KHDHub rows show their real quality (not 4K from the site's name) and their full release name, and copies of one file on two hosts are one row again. An episode title word ('inside') no longer drops every file.
+- Fewer list refreshes: a provider sync that brings nothing new no longer reloads widgets or the list on screen; Trakt and SIMKL marks no longer trigger a full history download (as MDBList's already did). DeadLight no longer refreshes the list itself after playback (it could leave an empty screen).
+- SmartPlay: when the saved source is not found, 'Choose source' stops the episode before the list opens; clearing a pin removes the menu entry at once.
+- AF3 keeps its own glass tint (DeadLight no longer darkens it).
+- Faster menus and widgets; a provider or debrid cloud that fails is now named in the log, and each scrape logs what its filters removed.
+
 [COLOR dodgerblue][B]Version 4.0.24[/B][/COLOR]
 - Faster: anime plays start sooner (the Stremio-number lookup and the season-pack checks run while providers search; One Piece's pack checks after the search 0.37 s -> 0.09 s on a PC), Extras opens faster, home widgets, In Progress, Watched TV and Next Episodes build faster, and every click loads less code.
 - Playback no longer waits for the intro / credits lookup before it starts; the stream-open loop and the background service do less work while a video plays.
