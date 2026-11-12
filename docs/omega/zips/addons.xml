@@ -149,6 +149,20 @@
             <news>Initial release of shared custom colored media icons for reuse in skins.</news>
         </extension>
     </addon>
+    <addon id="script.af3.helper" name="Arctic Fuse 3 Helper" version="1.0.0" provider-name="pitou212">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0" />
+            <import addon="script.module.pil" version="1.1.7" />
+        </requires>
+        <extension point="xbmc.python.script" library="script.py" />
+        <extension point="xbmc.service" library="service.py" />
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en">Blurred backgrounds and online ratings for Arctic Fuse 3 without TMDb Helper</summary>
+            <description lang="en">Makes the blurred and rounded background images Arctic Fuse 3 shows behind its windows and dialogs: the focused item's fanart (cycling its extra fanarts when the skin asks), and the plain background on demand. Runs only while Arctic Fuse 3 is the active skin with blur switched on. With an MDBList and/or OMDb API key in the skin settings it also looks up the focused item's ratings (IMDb, Rotten Tomatoes, Metacritic, Letterboxd, Trakt, MAL, MDBList); that part is ported from adamsbuilds' script.shortfuse.helper (GPL-3).</description>
+            <platform>all</platform>
+            <license>GPL-3.0-or-later</license>
+        </extension>
+    </addon>
     <addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.1.0">
       <requires>
         <import addon="xbmc.python" version="3.0.1"/>
