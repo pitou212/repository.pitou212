@@ -301,18 +301,18 @@
       </assets>
     </extension>
     </addon>
-    <addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (avdvplus/p3i)" provider-name="jurialmunkey, jamal2362, signde" version="73.3.4.18.6">
+    <addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (avdvplus/p3i)" provider-name="jurialmunkey, jamal2362, signde" version="73.3.4.18.24">
         <requires>
             <import addon="xbmc.gui" version="5.17.0" />
             <import addon="script.skinvariables" version="2.2.13" />
             <import addon="script.texturemaker" version="0.2.9" />
-            <import addon="plugin.video.themoviedb.helper" version="6.19.2" />
+            <import addon="script.af3.helper" version="1.0.0" />
             <import addon="resource.images.weathericons.white" version="0.0.1" />
             <import addon="resource.images.arctic.splash" version="1.1.0" />
             <import addon="resource.images.arctic.weather" version="1.0.4" />
             <import addon="resource.images.studios.coloured" version="0.0.1" />
             <import addon="resource.font.robotocjksc" version="0.0.3" />
-            <import addon="script.signde.tinyppi" version="10.2.7.3" />
+            <import addon="script.signde.tinyppi" version="10.2.7.3" optional="true" />
             <import addon="resource.images.mediaflags.signde" version="1.0.0" />
         </requires>
         <extension debugging="false" defaultthemename="Textures.xbt" effectslowdown="1" point="xbmc.gui.skin">
