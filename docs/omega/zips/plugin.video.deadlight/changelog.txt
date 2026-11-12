@@ -1,3 +1,12 @@
+[COLOR dodgerblue][B]Version 4.0.26[/B][/COLOR]
+- Window look: the accent (rings, bars, chips) and the focused button now follow DeadLight's own Window Theme -- crimson on the grey themes, blue on Midnight, sky on Slate, violet on Plum, green on Forest, terracotta on Mocha -- whatever the skin's highlight colour. Corners are always Soft (the Window Corners setting is gone). Glass Background and Glass Highlight are gone too: the glass follows the skin.
+- Arctic Fuse 3 without TMDb Helper: DeadLight reads the blur from script.af3.helper, shows a film's IMDb rating on the playback OSD, and lists the playing title's cast for AF3's OSD cast row.
+- Anime: whole-run shows (Naruto, One Piece) pick the right file in Stremio numbering, season packs and their episode ranges; names like 'Season2.S01E01' and 'Dorohedoro.(2026).-.01' count as this season's episode; titles match in other spellings (words run together, 'the' / 'a' / 'an' left out).
+- SmartPlay: the pin remembers which release it was; a pack is checked before it is played from; Clear SmartPlay Pin rebuilds the list again.
+- Direct Streams: the full file name is read from the FSL link when 4KHDHub cut it short.
+- Faster and lighter: scrape results are kept 72 hours at most and the caches are compacted weekly when widgets are quiet; an expired show is drawn from its cached row and refreshed after the list; comet and Direct Streams warm up once per episode per 30 minutes; episode lists know the first unwatched episode before they show.
+- Logs no longer include request error text (a debrid URL can carry the account key).
+
 [COLOR dodgerblue][B]Version 4.0.25[/B][/COLOR]
 - Anime: filler and recap episodes are marked in episode lists and Next Episodes, and Up Next can skip them (Settings: Skip Filler in Up Next). MAL scores and genres, and the AniList-outage backup, now come from api.tenrai.org (Jikan's API is gone).
 - Anime plays start sooner: the TVDB episode ids an anime scrape needs are fetched while the episode list is open, and no lookup is asked twice any more.
