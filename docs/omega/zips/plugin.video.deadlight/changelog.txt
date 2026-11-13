@@ -1,3 +1,6 @@
+[COLOR dodgerblue][B]Version 4.0.27[/B][/COLOR]
+- Arctic Fuse 3 Next Aired hub: one row per day (yesterday to six days ahead) from your MDBList calendar; each episode sits on the day it airs in your own time zone.
+
 [COLOR dodgerblue][B]Version 4.0.26[/B][/COLOR]
 - Window look: the accent (rings, bars, chips) and the focused button now follow DeadLight's own Window Theme -- crimson on the grey themes, blue on Midnight, sky on Slate, violet on Plum, green on Forest, terracotta on Mocha -- whatever the skin's highlight colour. Corners are always Soft (the Window Corners setting is gone). Glass Background and Glass Highlight are gone too: the glass follows the skin.
 - Arctic Fuse 3 without TMDb Helper: DeadLight reads the blur from script.af3.helper, shows a film's IMDb rating on the playback OSD, and lists the playing title's cast for AF3's OSD cast row.
