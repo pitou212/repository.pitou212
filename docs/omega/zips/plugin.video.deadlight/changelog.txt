@@ -1,3 +1,11 @@
+[COLOR dodgerblue][B]Version 4.0.29[/B][/COLOR]
+- Include Adult Anime (Settings > Anime, off by default): Anime > Genres gets Hentai, Anime search finds adult titles too, and adult anime is scraped from Sukebei (a 30 s minimum wait for those scrapes).
+- Anime > Studios replaces anime providers: AniList's 40 most-favourited studios with their logos, each opening the studio's main works.
+- Providers: sharper current TMDb logos, empty TV providers removed; network logos are back.
+- When AniList is down, Tenrai now also serves anime genre, studio, year and season pages, and Watch Order; Tenrai calls follow its published rate limit.
+- Fixed: menu rows added by an update (like Studios) never appeared on existing installs.
+- Fixed: stopping just before the next-episode hand-off opened the next episode's source list.
+
 [COLOR dodgerblue][B]Version 4.0.28[/B][/COLOR]
 - Extras and People redesigned: one screen with a hero (logo, facts, plot, buttons) and tabs, one section at a time; rows lift on focus. No blur behind DeadLight's windows: dialogs use a plain dim so the item a menu acts on stays visible, full-screen windows draw one theme-coloured background (Watch Order no longer turns grey when List Manager opens).
 - Next episode: at the credits the next file replaces the playing one -- Kodi stays in the video window (no trip to Home, no HDR or refresh-rate switch); about 4 s from credits to picture. Auto-Skip and the Countdown alert wait 5 s into the credits; the Skip button works while the hand-off waits; a named Credits chapter re-times the hand-off.
