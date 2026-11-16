@@ -1,3 +1,13 @@
+[COLOR dodgerblue][B]Version 4.0.28[/B][/COLOR]
+- Extras and People redesigned: one screen with a hero (logo, facts, plot, buttons) and tabs, one section at a time; rows lift on focus. No blur behind DeadLight's windows: dialogs use a plain dim so the item a menu acts on stays visible, full-screen windows draw one theme-coloured background (Watch Order no longer turns grey when List Manager opens).
+- Next episode: at the credits the next file replaces the playing one -- Kodi stays in the video window (no trip to Home, no HDR or refresh-rate switch); about 4 s from credits to picture. Auto-Skip and the Countdown alert wait 5 s into the credits; the Skip button works while the hand-off waits; a named Credits chapter re-times the hand-off.
+- Outro: of two IntroDB outros that fit the file, the earlier start wins; a decisive AniSkip vote keeps its own.
+- Faster: lists under Reuse Language Invoker (TV catalogue first open about 1.5 s), after-list work (prewarm, art fills, next page) runs in the service, catalogue art shows at once and fills in after, anime pages ask AniList once per page, providers share one connection pool.
+- Providers: TheRARBG replaces TorrentGalaxy (no longer answering); Comet's dead default instance replaced (Midnightignite default, Wizards added); MediaFusion pack sizes divided per episode again (no more 140 GB episodes); a size the provider never gave shows as "? GB", not "0.00 GB".
+- Anime: AIOStreams uses Cinemeta's numbering for a cour; one-word TMDb aliases no longer pull in other titles; Next Aired includes anime.
+- Ready for Kodi 22: lists with a Next Page entry, widget plays answered properly, no 60 s wait at the end of a call.
+- Also: MDBList liked lists update properly, Upload Kodi Log sends the newest 1 MB and says why an upload failed, Trakt / TMDb authorisation survives network blips.
+
 [COLOR dodgerblue][B]Version 4.0.27[/B][/COLOR]
 - Arctic Fuse 3 Next Aired hub: one row per day (yesterday to six days ahead) from your MDBList calendar; each episode sits on the day it airs in your own time zone.
 
