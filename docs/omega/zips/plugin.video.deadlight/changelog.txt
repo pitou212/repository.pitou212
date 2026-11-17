@@ -1,3 +1,10 @@
+[COLOR dodgerblue][B]Version 4.0.33[/B][/COLOR]
+- New look: every menu icon is redrawn in a solid style, closer to the classic Fen Light icons. Kodi may keep showing the old icons for a while until it refreshes its image cache.
+- Anime > Genres: each genre has its own icon (they all showed the same generic one).
+- Fixed: a dark tint over the Resolving window when playing a Direct Streams source (the results list was still fading out behind it).
+- Fixed: when the next episode started while the episode ratings were still loading, the new episode could show the previous one's ratings and title in the info.
+- Menu editor: the Choose Icon list now offers exactly the current icon set.
+
 [COLOR dodgerblue][B]Version 4.0.32[/B][/COLOR]
 - Genre menus show their icons again (they were missing from DeadLight's icon store, so every genre tile was blank).
 - With Arctic Fuse 3's background styles, the Movies / TV / Anime genre menus show the style's painting for the focused genre behind it.
