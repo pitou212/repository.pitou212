@@ -1,3 +1,7 @@
+[COLOR dodgerblue][B]Version 4.0.32[/B][/COLOR]
+- Genre menus show their icons again (they were missing from DeadLight's icon store, so every genre tile was blank).
+- With Arctic Fuse 3's background styles, the Movies / TV / Anime genre menus show the style's painting for the focused genre behind it.
+
 [COLOR dodgerblue][B]Version 4.0.31[/B][/COLOR]
 - Fixed: with Dolby Vision (or HDR) on Exclude, Hybrid releases (both formats) were dropped when the other format was on Sort to Top. They are now dropped only when both formats are on Exclude.
 - Torrent providers (Comet, Torrentio, MediaFusion and the other Stremio-based ones): a second search for the same title, such as Rescrape With All, now waits for the search still running instead of asking the provider again; a provider that failed in the last 30 s is skipped at once.
