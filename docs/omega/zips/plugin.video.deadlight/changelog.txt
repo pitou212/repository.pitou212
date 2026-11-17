@@ -1,3 +1,10 @@
+[COLOR dodgerblue][B]Version 4.0.30[/B][/COLOR]
+- Next Episode settings simplified: At the Credits is Show Countdown or Play Next Immediately (no alert style, no Pause & Wait). The countdown's Stop button now stops the player; Back dismisses the card and keeps watching. Your old choices are carried over.
+- Next Episode owns the credits: Skip Segments > Credits (No Next Episode) only acts when no next episode follows (movies, finales); Show Sources can open at the credits or at the end.
+- Fixed: the next-episode card could close on the old episode's last frame, so the credits flashed back before the next episode appeared.
+- Direct Streams: a release on several hosts now plays from PixelDrain first, then FSL, with FSLv2 last (FSL and FSLv2 links often slow down or freeze). FSL links are no longer labelled FSLv2, and FSLv2 copies no longer show as a second row of the same file.
+- When Kodi crashes, the session's log is now kept beside the crash dump at the next start.
+
 [COLOR dodgerblue][B]Version 4.0.29[/B][/COLOR]
 - Include Adult Anime (Settings > Anime, off by default): Anime > Genres gets Hentai, Anime search finds adult titles too, and adult anime is scraped from Sukebei (a 30 s minimum wait for those scrapes).
 - Anime > Studios replaces anime providers: AniList's 40 most-favourited studios with their logos, each opening the studio's main works.
