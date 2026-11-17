@@ -1,3 +1,9 @@
+[COLOR dodgerblue][B]Version 4.0.31[/B][/COLOR]
+- Fixed: with Dolby Vision (or HDR) on Exclude, Hybrid releases (both formats) were dropped when the other format was on Sort to Top. They are now dropped only when both formats are on Exclude.
+- Torrent providers (Comet, Torrentio, MediaFusion and the other Stremio-based ones): a second search for the same title, such as Rescrape With All, now waits for the search still running instead of asking the provider again; a provider that failed in the last 30 s is skipped at once.
+- Meteor: anime releases are looked up on AniList first, then on Kitsu when AniList has none.
+- With Reuse Language Invoker on: playback and the widget refresh after it each start a fresh interpreter, avoiding one of the Kodi 21 crashes that setting can cause.
+
 [COLOR dodgerblue][B]Version 4.0.30[/B][/COLOR]
 - Next Episode settings simplified: At the Credits is Show Countdown or Play Next Immediately (no alert style, no Pause & Wait). The countdown's Stop button now stops the player; Back dismisses the card and keeps watching. Your old choices are carried over.
 - Next Episode owns the credits: Skip Segments > Credits (No Next Episode) only acts when no next episode follows (movies, finales); Show Sources can open at the credits or at the end.
