@@ -1,3 +1,15 @@
+[COLOR dodgerblue][B]Version 4.0.34[/B][/COLOR]
+- New HTTP Scrapers (Direct Streams): HDHub4u, 4KHDHub, MoviesDrive, AnimeDubHindi and Cinejoy, each with its own switch. Their links are checked like a player would before they are listed, and their names and episode numbers are matched to the title, absolute anime numbering included.
+- Up to three Stremio add-ons of your own (Stremio Add-ons): each slot takes a manifest URL and has its own switch. In the results they are their own provider, with their own colour, filter and Provider Priority.
+- Anime gate for every scraper: on anime, only the providers ticked in Settings > Anime Providers run (now one list for the torrent sites, HTTP Scrapers, each Stremio add-on, AIOStreams and Easynews); elsewhere each provider's own switch decides. AnimeDubHindi runs on anime only. Rescrape With All Scrapers now runs DeadLight's own scrapers too, still respecting the anime list.
+- An HTTP provider that times out 3 times in a row is skipped for 10 minutes, then tried once again.
+- Results window: quality pills for 4K / 1080P / 720P / SD, Show Filtered Sources lists the filtered results merged and sorted like the main list, Meteor rows show their debrid, and the count line keeps its filter notes visible on long episode titles.
+- Arctic Fuse 3: new episodes (aired in the last 7 days, not watched) and shows on your dropped list are marked on their artwork.
+- Faster first click on anime: one Cinemeta lookup per show, and the next two upcoming episodes' ids are fetched while the episode list is open.
+- Browse > Play works with TorBox; Skip Intro uses MKV chapter names when a file has them.
+- Fixed: an empty MDBList watchlist (or the last page of any paged list) logged an error on every widget refresh.
+- Fixed: Reset Settings skipped the HTTP Scrapers colour.
+
 [COLOR dodgerblue][B]Version 4.0.33[/B][/COLOR]
 - New look: every menu icon is redrawn in a solid style, closer to the classic Fen Light icons. Kodi may keep showing the old icons for a while until it refreshes its image cache.
 - Anime > Genres: each genre has its own icon (they all showed the same generic one).
