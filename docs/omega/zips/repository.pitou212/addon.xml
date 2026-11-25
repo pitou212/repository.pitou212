@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.pitou212" name="Pitou Repository" version="1.0.3" provider-name="pitou212">
+<addon id="repository.pitou212" name="Pitou Repository" version="1.0.4" provider-name="pitou212">
     <extension point="xbmc.addon.repository" name="Pitou Repository">
+        <!-- Shared by Kodi 21 and 22: everything except Arctic Fuse 3. Kodi merges every folder whose
+             range matches and keeps the highest version, so the skin must live in exactly one per Kodi. -->
         <dir minversion="20.9.1">
             <info compressed="false">https://pitou212.github.io/repository.pitou212/omega/zips/addons.xml</info>
             <checksum>https://pitou212.github.io/repository.pitou212/omega/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://pitou212.github.io/repository.pitou212/omega/zips/</datadir>
+        </dir>
+        <!-- Arctic Fuse 3 for Kodi 21 (Omega, xbmc.addon 21.x) -->
+        <dir minversion="20.9.1" maxversion="21.89.999">
+            <info compressed="false">https://pitou212.github.io/repository.pitou212/kodi21/zips/addons.xml</info>
+            <checksum>https://pitou212.github.io/repository.pitou212/kodi21/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://pitou212.github.io/repository.pitou212/kodi21/zips/</datadir>
+        </dir>
+        <!-- Arctic Fuse 3 for Kodi 22 (Piers, xbmc.addon 21.90.x and later) -->
+        <dir minversion="21.90.0">
+            <info compressed="false">https://pitou212.github.io/repository.pitou212/kodi22/zips/addons.xml</info>
+            <checksum>https://pitou212.github.io/repository.pitou212/kodi22/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://pitou212.github.io/repository.pitou212/kodi22/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">

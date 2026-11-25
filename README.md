@@ -1,6 +1,6 @@
 # Pitou Kodi repository
 
-Personal Kodi repository (Omega) serving DeadLight, a locally patched Arctic Fuse 3,
+Personal Kodi repository (Kodi 21 Omega and Kodi 22 Piers) serving DeadLight, a locally patched Arctic Fuse 3,
 and the dependencies the skin needs.
 
 | add-on | source | notes |
@@ -20,8 +20,23 @@ https://pitou212.github.io/repository.pitou212/
 or install the repository zip directly:
 
 ```
-https://pitou212.github.io/repository.pitou212/omega/zips/repository.pitou212/repository.pitou212-1.0.3.zip
+https://pitou212.github.io/repository.pitou212/omega/zips/repository.pitou212/repository.pitou212-1.0.4.zip
 ```
+
+## Folders per Kodi version
+
+`repository.pitou212` (1.0.4+) reads three folders. Kodi fetches every folder whose
+`minversion`/`maxversion` matches its `xbmc.addon` version, merges them, and keeps the
+highest version of each add-on, so Arctic Fuse 3 lives in exactly one folder per Kodi:
+
+| folder | read by | holds | published by |
+|---|---|---|---|
+| `docs/omega/zips` | Kodi 21 and 22 | everything except AF3 | DeadLight CI, `mirror-deps.yml` |
+| `docs/kodi21/zips` | Kodi 21 (`xbmc.addon` <= 21.89.999) | AF3 from `main` | AF3 `track-upstream.yml` |
+| `docs/kodi22/zips` | Kodi 22 (`xbmc.addon` >= 21.90.0) | AF3 from `piers` | AF3 `publish-kodi22.yml` |
+
+Never publish AF3 into `omega`. Every folder must exist with an index: Kodi treats a
+folder it cannot fetch as a failure of the whole repository.
 
 ## Mirrored dependencies
 
