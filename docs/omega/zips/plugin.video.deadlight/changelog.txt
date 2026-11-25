@@ -1,3 +1,10 @@
+[COLOR dodgerblue][B]Version 4.0.35[/B][/COLOR]
+- Faster scrapes: TorBox is asked only whether a torrent is cached while scraping; the torrent's files are read when you pick it. On the box a movie's results now open about 1 second sooner, an episode's about 0.6 seconds sooner.
+- The results window shows how long the scrape took, as POV does ('4.62 SECONDS · 262 RESULTS').
+- Fixed: Season and Show packs from Comet, Meteor, Torrentio and MediaFusion were missing from episode results.
+- Fixed: a TorBox special (Season 0) whose file name has no episode number failed to play.
+- Results window: opens and scrolls with shorter animations, and its rows are built faster.
+
 [COLOR dodgerblue][B]Version 4.0.34[/B][/COLOR]
 - New HTTP Scrapers (Direct Streams): HDHub4u, 4KHDHub, MoviesDrive, AnimeDubHindi and Cinejoy, each with its own switch. Their links are checked like a player would before they are listed, and their names and episode numbers are matched to the title, absolute anime numbering included.
 - Up to three Stremio add-ons of your own (Stremio Add-ons): each slot takes a manifest URL and has its own switch. In the results they are their own provider, with their own colour, filter and Provider Priority.
