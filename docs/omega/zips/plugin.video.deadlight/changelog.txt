@@ -1,3 +1,8 @@
+[COLOR dodgerblue][B]Version 4.0.38[/B][/COLOR]
+- MoviesDrive: works again for every film and episode. The site moved to a new address and the old one quietly answered with its 15 newest posts instead of the search, so only brand-new releases found anything. DeadLight now notices an answer that is not for the title it asked about and finds the site's current address by itself.
+- In cinemas: a film counts as released from the day before its digital release date. Indian streaming releases go live at midnight India time (the afternoon before in American time zones), and their torrent copies were hidden as cam rips for those hours.
+- Results: the tag chips are drawn at half the size (they look the same) -- lighter for the box to show.
+
 [COLOR dodgerblue][B]Version 4.0.37[/B][/COLOR]
 - Next episode: TorBox no longer shows "not answering" when the next episode starts after a long episode, and the providers no longer all fail at that moment. A connection the server closed during the episode is now replaced and the request sent again once.
 - SmartPlay: when your pinned release is Dolby Vision and the next episode only exists as the same release in plain HDR (for example inside the group's season pack), SmartPlay plays that copy instead of showing the results list. A Dolby Vision copy is still preferred when there is one.
