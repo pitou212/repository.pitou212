@@ -1,3 +1,10 @@
+[COLOR dodgerblue][B]Version 4.0.36[/B][/COLOR]
+- Results window: opens sooner on long lists -- the first rows are ready when it opens, the rest fill in a moment later.
+- Episode packs on TorBox: a pack that does not hold the episode, or holds no video, is hidden; a pack that does shows that episode's file size. Comet and MediaFusion rows that are really packs now show the episode's size and the PACK tag instead of the whole pack's size.
+- Next episode: its scrape now waits for every provider, like a normal scrape, so its list is no longer short.
+- Next episode with At the Credits = Play Next Immediately: when an episode has no credits data, a card shows the time left and plays the next episode at the end (it used to wait silently).
+- Results: rows from the HTTP Scrapers show their site (4KHDHub, HDHub4u, MoviesDrive, Cinejoy, AnimeDubHindi) instead of HTTP.
+
 [COLOR dodgerblue][B]Version 4.0.35[/B][/COLOR]
 - Faster scrapes: TorBox is asked only whether a torrent is cached while scraping; the torrent's files are read when you pick it. On the box a movie's results now open about 1 second sooner, an episode's about 0.6 seconds sooner.
 - The results window shows how long the scrape took, as POV does ('4.62 SECONDS · 262 RESULTS').
