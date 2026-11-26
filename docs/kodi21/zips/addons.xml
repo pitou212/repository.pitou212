@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-    <addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (avdvplus/p3i)" provider-name="jurialmunkey, jamal2362, signde" version="73.3.5.2.4">
+    <addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (avdvplus/p3i)" provider-name="jurialmunkey, jamal2362, signde" version="73.3.5.11.2">
         <requires>
             <import addon="xbmc.gui" version="5.17.0" />
-            <import addon="script.skinvariables" version="2.3.2" />
+            <import addon="script.skinvariables" version="2.3.12" />
             <import addon="script.texturemaker" version="0.2.9" />
             <import addon="script.af3.helper" version="1.0.1" />
             <import addon="resource.images.weathericons.white" version="0.0.1" />
-            <import addon="resource.images.arctic.splash" version="1.1.0" />
-            <import addon="resource.images.arctic.weather" version="1.0.4" />
+            <import addon="resource.images.arctic.splash" version="1.1.1" />
             <import addon="resource.images.studios.coloured" version="0.0.1" />
             <import addon="resource.font.robotocjksc" version="0.0.3" />
             <import addon="script.signde.tinyppi" version="10.2.7.3" optional="true" />
