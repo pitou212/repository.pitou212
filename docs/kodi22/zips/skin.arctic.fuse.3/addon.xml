@@ -1,12 +1,11 @@
-<addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (avdvplus/p3i)" provider-name="jurialmunkey, jamal2362, signde" version="73.3.5.2.4">
+<addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (avdvplus/p3i)" provider-name="jurialmunkey, jamal2362, signde" version="73.3.5.11.1">
     <requires>
         <import addon="xbmc.gui" version="5.18.0" />
-        <import addon="script.skinvariables" version="2.3.2" />
+        <import addon="script.skinvariables" version="2.3.12" />
         <import addon="script.texturemaker" version="0.2.9" />
         <import addon="script.af3.helper" version="1.0.1" />
         <import addon="resource.images.weathericons.white" version="0.0.1" />
-        <import addon="resource.images.arctic.splash" version="1.1.0" />
-        <import addon="resource.images.arctic.weather" version="1.0.4" />
+        <import addon="resource.images.arctic.splash" version="1.1.1" />
         <import addon="resource.images.studios.coloured" version="0.0.1" />
         <import addon="resource.font.robotocjksc" version="0.0.3" />
         <import addon="resource.images.mediaflags.signde" version="1.0.0" />
@@ -37,15 +36,50 @@
         <forum />
         <source />
         <news>
-            [I][COLOR FFFF9800]v73.3.5.2-piers[/COLOR][/I][CR]- Updated to upstream v3.5.2.[CR][CR]
-            [I][COLOR FFFF9800]v73.3.4.18-piers[/COLOR][/I][CR]- Updated to upstream v3.4.18.[CR][CR]
-            [I][COLOR FFFF9800]v73.3.4.15-piers[/COLOR][/I][CR]- Updated to upstream v3.4.15.[CR]- Improved Dolby Vision MEL/FEL icons in library views.[CR][CR]
-            [I][COLOR FFFF9800]v73.3.4.9-piers[/COLOR][/I][CR]- Updated to upstream v3.4.9.[CR][CR]
-            [I][COLOR FFFF9800]v73.3.4.8-piers[/COLOR][/I][CR]- Updated to upstream v3.4.8.[CR][CR]
-            [I][COLOR FFFF9800]v73.3.4.6-piers[/COLOR][/I][CR]- Updated to upstream v3.4.6.[CR][CR]
-            [I][COLOR FFFF9800]v73.3.4.1-piers[/COLOR][/I][CR]- Updated to upstream v3.4.1.[CR]- Improved recovery after updating the active skin.[CR][CR]
-            [I][COLOR FFFF9800]v73.3.3.12-piers[/COLOR][/I][CR]- Updated to upstream v3.3.12.[CR][CR]
-            [I][COLOR FFFF9800]v73.3.3.9-piers[/COLOR][/I][CR]- Updated to upstream v3.3.9.[CR][CR][I][COLOR FFFF9800]v73.3.3.8-piers[/COLOR][/I][CR]- Updated to upstream v3.3.8.[CR][CR][I][COLOR FFFF9800]v73.3.3.7-piers[/COLOR][/I][CR]- Updated to upstream v3.3.7.[CR][CR][I][COLOR FFFF9800]v73.3.3.5-piers[/COLOR][/I][CR]- Added optional signde colored media icons for Kodi 22.</news>
+            [I][COLOR FFFF9800]v73.3.5.2-omega[/COLOR][/I][CR]- Updated to upstream v3.5.2.[CR][CR]
+            [I][COLOR FFFF9800]v73.3.4.18-omega[/COLOR][/I][CR]- Updated to upstream v3.4.18.[CR][CR]
+            [I][COLOR FFFF9800]v73.3.4.15-omega[/COLOR][/I][CR]- Fixed missing boxes around infoline details.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.4.15-omega[/COLOR][/I][CR]- Updated to upstream v3.4.15.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.4.9-omega[/COLOR][/I][CR]- Updated to upstream v3.4.9.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.4.8-omega[/COLOR][/I][CR]- Updated to upstream v3.4.8.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.4.6-omega[/COLOR][/I][CR]- Updated to upstream v3.4.6.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.4.1-omega[/COLOR][/I][CR]- Updated to upstream v3.4.1.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.3.12-omega[/COLOR][/I][CR]- Updated to upstream v3.3.12.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.3.9-omega[/COLOR][/I][CR]- Updated to upstream v3.3.9.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.3.8-omega[/COLOR][/I][CR]- Updated to upstream v3.3.8.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.3.7-omega[/COLOR][/I][CR]- Updated to upstream v3.3.7.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.3.5[/COLOR][/I][CR]- Updated to upstream v3.3.5.[CR][CR]
+            [I][COLOR FFFF9800]v72.3.3.3[/COLOR][/I][CR]- Moved colored media icons to the shared signde Media Flags addon.[CR][CR]
+            [I][COLOR FFFF9800]v71.3.3.3[/COLOR][/I][CR]- Updated to upstream v3.3.3.[CR][CR]
+            [I][COLOR FFFF9800]v71.3.3.2[/COLOR][/I][CR]- Updated to upstream v3.3.2.[CR][CR]
+            [I][COLOR FFFF9800]v71.3.3.0[/COLOR][/I][CR]- Updated to upstream v3.3.0.[CR][CR]
+            [I][COLOR FFFF9800]v71.3.2.19[/COLOR][/I][CR]- Fixed missing codec information in the Video menu during playback.[CR][CR]
+            [I][COLOR FFFF9800]v70.3.2.19[/COLOR][/I][CR]- Changed the Video OSD PPI/VS10 selector to open on Select/click or Up instead of automatically on focus[CR][CR]
+
+            [I][COLOR FFFF9800]v69.3.2.19[/COLOR][/I][CR]- Updated to upstream 3.2.19
+
+            [I][COLOR FFFF9800]v68.3.2.16[/COLOR][/I][CR]- Delegated Player Process Info and playback codec badges to signde PPI[CR]- Added Profile 7 MEL/FEL media flags
+
+            [I][COLOR FFFF9800]v65.3.2.16[/COLOR][/I][CR]- Added an option to hide audio channel-layout artwork[CR]- Improved media flag compatibility with legacy and NFO codec values
+
+            [I][COLOR FFFF9800]v64.3.2.16[/COLOR][/I][CR]- Updated to upstream 3.2.16
+
+            [I][COLOR FFFF9800]v64.3.2.15[/COLOR][/I][CR]- Added audio channel-layout artwork and Dolby Vision enhancement-layer indicators from jamal2362's Tiny PPI
+
+            [I][COLOR FFFF9800]v63.3.2.15[/COLOR][/I][CR]- Updated to upstream 3.2.15
+
+            [I][COLOR FFFF9800]v63.3.2.14[/COLOR][/I][CR]- Updated media flag icons
+
+            [I][COLOR FFFF9800]v62.3.2.14[/COLOR][/I][CR]- Updated to upstream 3.2.14[CR]- Improved recovery after updating the active skin[CR]- Updated media flag icons
+
+            [I][COLOR FFFF9800]v61.3.2.13[/COLOR][/I][CR]- Fixed L5 active offsets in Player Process Info[CR]- Hid footer media flags in wall views
+
+            [I][COLOR FFFF9800]v60.3.2.13[/COLOR][/I][CR]- Added optional codec media flags in library footer[CR]- Improved source-quality, HDR10+, Atmos, DTS-X, AV1, VP8, and VP9 media flag matching[CR]- Updated packed media flag assets and channel icons
+
+            [I][COLOR FFFF9800]v59.3.2.13[/COLOR][/I][CR]- Updated to upstream 3.2.13
+
+            [I][COLOR FFFF9800]v58.3.2.11[/COLOR][/I][CR]- Fixes for Trakt compatibility
+        </news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
