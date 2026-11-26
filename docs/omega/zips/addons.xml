@@ -259,7 +259,7 @@
         </extension>
     </addon>
     <addon id="script.skinvariables"
-    version="2.3.2"
+    version="2.3.14"
     name="Skin Variables"
     provider-name="jurialmunkey">
     <requires>

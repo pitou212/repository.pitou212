@@ -34,6 +34,12 @@ SOURCES = {
         'index': 'https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/addons.xml',
         'datadir': 'https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/',
     },
+    # 2026-11-26: AF3 now follows jurialmunkey directly (73.3.5.11 = his 3.5.11), which needs script.skinvariables >= 2.3.12;
+    # signde still serves 2.3.2. His Kodi 21 feed (omega) carries the current SkinVariables.
+    'jurialmunkey_omega': {
+        'index': 'https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/omega/zips/addons.xml',
+        'datadir': 'https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/omega/zips/',
+    },
 }
 
 # Every add-on skin.arctic.fuse.3 needs, directly or through another dependency,
@@ -43,7 +49,7 @@ SOURCES = {
 MIRROR = {
     'resource.images.mediaflags.signde': 'signde',
     'script.signde.tinyppi': 'signde',
-    'script.skinvariables': 'signde',
+    'script.skinvariables': 'jurialmunkey_omega',   # 2026-11-26: AF3 73.3.5.11 needs >= 2.3.12 (signde: 2.3.2)
     'script.texturemaker': 'signde',
     'plugin.video.themoviedb.helper': 'signde',
     'script.module.jurialmunkey': 'signde',
