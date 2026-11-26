@@ -1,3 +1,7 @@
+[COLOR dodgerblue][B]Version 4.0.37[/B][/COLOR]
+- Next episode: TorBox no longer shows "not answering" when the next episode starts after a long episode, and the providers no longer all fail at that moment. A connection the server closed during the episode is now replaced and the request sent again once.
+- SmartPlay: when your pinned release is Dolby Vision and the next episode only exists as the same release in plain HDR (for example inside the group's season pack), SmartPlay plays that copy instead of showing the results list. A Dolby Vision copy is still preferred when there is one.
+
 [COLOR dodgerblue][B]Version 4.0.36[/B][/COLOR]
 - Results window: opens sooner on long lists -- the first rows are ready when it opens, the rest fill in a moment later.
 - Episode packs on TorBox: a pack that does not hold the episode, or holds no video, is hidden; a pack that does shows that episode's file size. Comet and MediaFusion rows that are really packs now show the episode's size and the PACK tag instead of the whole pack's size.
