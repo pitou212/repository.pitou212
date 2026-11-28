@@ -1,3 +1,8 @@
+[COLOR dodgerblue][B]Version 4.0.40[/B][/COLOR]
+- Anime: a new episode's search no longer waits for AnimeTosho's season-pack list -- about 2.5 seconds sooner on the box. The pack list DeadLight already has is used at once and refreshed in the background for the next search; the episode itself is still asked for live.
+- Anime: a newly aired episode uses the AniDB episode id DeadLight already knows instead of asking ani.zip again first. The entry is still checked again in the background, and a changed id is logged.
+- Anime mappings (Fribb): after the weekly update, DeadLight's lookup index is built in the background instead of during the next click.
+
 [COLOR dodgerblue][B]Version 4.0.39[/B][/COLOR]
 - Faster searches on a box running a Kodi build with the language-invoker fix (our CoreELEC build): DeadLight keeps its Python running between screens there, so a search starts with its providers already loaded -- about a second sooner on the box. Other Kodi builds keep the old behaviour.
 - Fonts: DeadLight's windows use the skin's own fonts again. With Arctic Fuse 3 (which defines its fonts through includes) DeadLight could not see them, and on a box where another add-on had added two Arial fonts, most of DeadLight's text was drawn in Arial. Titles are bold again, and the larger labels have a real font.
