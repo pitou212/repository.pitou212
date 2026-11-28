@@ -98,10 +98,11 @@ def stamp_version(addon_xml, suffix):
     if not m:
         raise SystemExit('could not find addon version attribute')
     base = m.group(2)
-    if base.endswith(suffix):
-        new = base
-    else:
-        new = base + suffix
+    # Always append. The source never carries a suffix: 'auto' / 'commits' are counted fresh on every build, and an
+    # empty suffix ('' - DeadLight, script.af3.helper) leaves the version as it is. The old "already ends with the
+    # suffix" skip fired whenever the count equalled the version's last component: ArcticFuse3 build 11 on base
+    # 73.3.5.11 was packaged as 73.3.5.11 (a LOWER version), so the index kept 73.3.5.11.10 and the fix never shipped.
+    new = base + suffix
     text = text[:m.start(2)] + new + text[m.end(2):]
     data = text.encode('utf-8')
     try:
