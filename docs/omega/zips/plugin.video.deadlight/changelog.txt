@@ -1,3 +1,12 @@
+[COLOR dodgerblue][B]Version 4.0.39[/B][/COLOR]
+- Faster searches on a box running a Kodi build with the language-invoker fix (our CoreELEC build): DeadLight keeps its Python running between screens there, so a search starts with its providers already loaded -- about a second sooner on the box. Other Kodi builds keep the old behaviour.
+- Fonts: DeadLight's windows use the skin's own fonts again. With Arctic Fuse 3 (which defines its fonts through includes) DeadLight could not see them, and on a box where another add-on had added two Arial fonts, most of DeadLight's text was drawn in Arial. Titles are bold again, and the larger labels have a real font.
+- MDBList: finishing a film or an episode you had already watched now records the new watch time (as Red Light 3.1.9 does). Marking a whole season or show by hand does not change old dates.
+- Providers: HBO Max, Paramount Plus Premium, Paramount Plus Essential and HBO Max Amazon Channel are in the Movies and TV Shows provider lists.
+- Trakt Watchlist: a Rank sort (your own order on Trakt). An MDBList watchlist has no rank and sorts by Date Added with it.
+- Episode stills: a season's cached episode images end on the air day of its next episode without a still, so a new episode's image shows once TMDb has it.
+- Results (wide list): each row draws a few controls fewer, same look.
+
 [COLOR dodgerblue][B]Version 4.0.38[/B][/COLOR]
 - MoviesDrive: works again for every film and episode. The site moved to a new address and the old one quietly answered with its 15 newest posts instead of the search, so only brand-new releases found anything. DeadLight now notices an answer that is not for the title it asked about and finds the site's current address by itself.
 - In cinemas: a film counts as released from the day before its digital release date. Indian streaming releases go live at midnight India time (the afternoon before in American time zones), and their torrent copies were hidden as cam rips for those hours.
