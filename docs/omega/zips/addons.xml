@@ -163,7 +163,7 @@
             <news>Added monochrome versions of the media flags and an Auro-3D library icon. Updated the colored resolution, audio and source icons.[CR][CR]Initial release of shared custom colored media icons for reuse in skins.</news>
         </extension>
     </addon>
-    <addon id="script.af3.helper" name="Arctic Fuse 3 Helper" version="1.0.3" provider-name="pitou212">
+    <addon id="script.af3.helper" name="Arctic Fuse 3 Helper" version="1.0.4" provider-name="pitou212">
         <requires>
             <import addon="xbmc.python" version="3.0.0" />
             <import addon="script.module.pil" version="1.1.7" />
