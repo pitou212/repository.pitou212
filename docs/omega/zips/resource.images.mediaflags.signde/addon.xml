@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="resource.images.mediaflags.signde" version="1.0.0" name="signde Media Flags" provider-name="signde">
+<addon id="resource.images.mediaflags.signde" version="1.0.1" name="signde Media Flags" provider-name="signde">
     <requires>
         <import addon="kodi.resource" version="1.0.0" />
     </requires>
@@ -9,6 +9,6 @@
         <description lang="en_GB">Colored audio codec, video codec, source, HDR, resolution, aspect ratio, and channel-layout icons shared by signde skins.</description>
         <license>Creative Commons Attribution-NonCommercial-ShareAlike 4.0</license>
         <platform>all</platform>
-        <news>Initial release of shared custom colored media icons for reuse in skins.</news>
+        <news>Added monochrome versions of the media flags and an Auro-3D library icon. Updated the colored resolution, audio and source icons.[CR][CR]Initial release of shared custom colored media icons for reuse in skins.</news>
     </extension>
 </addon>

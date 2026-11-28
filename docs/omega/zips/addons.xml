@@ -150,7 +150,7 @@
             <platform>all</platform>
         </extension>
     </addon>
-    <addon id="resource.images.mediaflags.signde" version="1.0.0" name="signde Media Flags" provider-name="signde">
+    <addon id="resource.images.mediaflags.signde" version="1.0.1" name="signde Media Flags" provider-name="signde">
         <requires>
             <import addon="kodi.resource" version="1.0.0" />
         </requires>
@@ -160,7 +160,7 @@
             <description lang="en_GB">Colored audio codec, video codec, source, HDR, resolution, aspect ratio, and channel-layout icons shared by signde skins.</description>
             <license>Creative Commons Attribution-NonCommercial-ShareAlike 4.0</license>
             <platform>all</platform>
-            <news>Initial release of shared custom colored media icons for reuse in skins.</news>
+            <news>Added monochrome versions of the media flags and an Auro-3D library icon. Updated the colored resolution, audio and source icons.[CR][CR]Initial release of shared custom colored media icons for reuse in skins.</news>
         </extension>
     </addon>
     <addon id="script.af3.helper" name="Arctic Fuse 3 Helper" version="1.0.3" provider-name="pitou212">
@@ -212,7 +212,7 @@
         </assets>
       </extension>
     </addon>
-    <addon id="script.signde.tinyppi" name="signde PPI (avdvplus / p3i)" version="17.2.7.5" provider-name="jamal2362, signde">
+    <addon id="script.signde.tinyppi" name="signde PPI (avdvplus / p3i)" version="18.2.7.5" provider-name="jamal2362, signde">
         <requires>
             <import addon="xbmc.python" version="3.0.0"/>
         </requires>
@@ -240,6 +240,11 @@
                 <fanart>fanart.jpg</fanart>
             </assets>
             <news>
+                [B]18.2.7.5[/B][CR]
+                - Show the active Dolby Vision module and target maximum luminance when the build reports them.[CR]
+                - Show detected picture borders and L5 detection status.[CR]
+                - Recognize DTS:X on DTS-HD HRA and Auro-3D on DTS-HD MA in playback badges and PPI.[CR]
+                - Fixed the CMv2.9 to CMv4.0 indicator when CMv4.0 metadata is appended.[CR][CR]
                 [B]17.2.7.5[/B][CR]
                 - Codec badges now appear for videos with no audio track or an unrecognized audio format.[CR][CR]
                 [B]16.2.7.5[/B][CR]

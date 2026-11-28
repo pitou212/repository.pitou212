@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.signde.tinyppi" name="signde PPI (avdvplus / p3i)" version="17.2.7.5" provider-name="jamal2362, signde">
+<addon id="script.signde.tinyppi" name="signde PPI (avdvplus / p3i)" version="18.2.7.5" provider-name="jamal2362, signde">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -27,6 +27,11 @@
             <fanart>fanart.jpg</fanart>
         </assets>
         <news>
+            [B]18.2.7.5[/B][CR]
+            - Show the active Dolby Vision module and target maximum luminance when the build reports them.[CR]
+            - Show detected picture borders and L5 detection status.[CR]
+            - Recognize DTS:X on DTS-HD HRA and Auro-3D on DTS-HD MA in playback badges and PPI.[CR]
+            - Fixed the CMv2.9 to CMv4.0 indicator when CMv4.0 metadata is appended.[CR][CR]
             [B]17.2.7.5[/B][CR]
             - Codec badges now appear for videos with no audio track or an unrecognized audio format.[CR][CR]
             [B]16.2.7.5[/B][CR]
