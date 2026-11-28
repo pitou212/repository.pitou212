@@ -1,3 +1,8 @@
+[COLOR dodgerblue][B]Version 4.0.41[/B][/COLOR]
+- Anime: MediaFusion season packs now show the size of one episode instead of the whole season (a 149 GB pack reads 6.2 GB per episode), like the other providers.
+- Play Random works again from a show's options menu and from the extras window (it failed every time).
+- Cleanup: an unused import removed; button actions in the extras and discover windows are called directly.
+
 [COLOR dodgerblue][B]Version 4.0.40[/B][/COLOR]
 - Anime: a new episode's search no longer waits for AnimeTosho's season-pack list -- about 2.5 seconds sooner on the box. The pack list DeadLight already has is used at once and refreshed in the background for the next search; the episode itself is still asked for live.
 - Anime: a newly aired episode uses the AniDB episode id DeadLight already knows instead of asking ani.zip again first. The entry is still checked again in the background, and a changed id is logged.
